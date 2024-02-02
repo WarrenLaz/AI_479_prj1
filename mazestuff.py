@@ -9,9 +9,9 @@ def createMaze(): #10x10
     maze[start[0]][start[1]] = 'S'
     maze[end[0]][end[1]] = 'G'
 
-    return [createMazeAux(maze, start, end) , start, end]
+    return [createMazeAux(maze, start) , start, end]
 
-def createMazeAux(maze, s, g):
+def createMazeAux(maze, s):
     visited = [[0 for _ in range(10)] for _ in range(10)]
     stack = []
     stack.append(s)
@@ -51,6 +51,21 @@ def createMazeAux(maze, s, g):
 
     return maze
 
+def checkBounds(x,y, visited, maze, listpoints):
+        if(x-1 >= 0):
+            if(visited[y][x-1] == 0 and not(maze[y][x-1] == 'x') ):
+                listpoints.append([y,x-1])
+        if(x+1 < 10):
+            if(visited[y][x+1] == 0 and not(maze[y][x+1] == 'x')):
+                listpoints.append([y,x+1])
+        if(y-1 >= 0):
+            if(visited[y-1][x] == 0 and not(maze[y-1][x] == 'x')):
+                listpoints.append([y-1,x])
+        if(y+1 < 10):
+            if(visited[y+1][x] == 0 and not(maze[y+1][x] == 'x')):
+                listpoints.append([y+1,x])
+        return listpoints
+
 def SolveWeights(maze, s):
     visited = [[0 for _ in range(10)] for _ in range(10)]
     weights = [[float('inf') for _ in range(10)] for _ in range(10)]
@@ -65,18 +80,7 @@ def SolveWeights(maze, s):
         y = point[0]
         listpoints = []
 
-        if(x-1 >= 0):
-            if(visited[y][x-1] == 0 and not(maze[y][x-1] == 'x') ):
-                listpoints.append([y,x-1])
-        if(x+1 < 10):
-            if(visited[y][x+1] == 0 and not(maze[y][x+1] == 'x')):
-                listpoints.append([y,x+1])
-        if(y-1 >= 0):
-            if(visited[y-1][x] == 0 and not(maze[y-1][x] == 'x')):
-                listpoints.append([y-1,x])
-        if(y+1 < 10):
-            if(visited[y+1][x] == 0 and not(maze[y+1][x] == 'x')):
-                listpoints.append([y+1,x])
+        listpoints = checkBounds(x,y, visited, maze, listpoints)
 
         if(listpoints and queue1):
             queue1.extend(listpoints)
@@ -95,7 +99,7 @@ def SolveWeights(maze, s):
     
     return weights
 
-def SolveDFS(maze, weights, end):
+def Solve(maze, weights, end):
     x = end[1]
     y = end[0]
     next = weights[end[0]][end[1]]
@@ -132,43 +136,26 @@ def SolveDFS(maze, weights, end):
 
     return maze
 
-
-def printsome(x,y,z):
-    z = SolveDFS(x, y, z)
-
-    for i in z:
-        for j in i:
-            print(j, end=" ")
-        print()
-
-
-
-for i in range(20):
-    n = createMaze()
-
-    x = n[0]
-    print("----------------------------------------")
-    print("GENERATED MAZE: ")
-
+def printMaze(x): 
     for i in x:
         for j in i:
             print(j, end=" ")
         print()
 
+for i in range(1):
+    n = createMaze()
+    print("----------------------------------------")
+    print("GENERATED MAZE: ")
+    printMaze(n[0])
     y = SolveWeights(n[0], n[1])
+    z = Solve(n[0],y,n[2])
     print("----------------------------------------")
     print("WEIGHTS: ")
-    for i in y:
-        for j in i:
-            if(j != float('inf')):
-                print(j, end=" ")
-            else:
-                print('x', end=" ")
-        print()
+    printMaze(y)
     print("----------------------------------------")
     print("SHORTEST PATH: ")
-    printsome(x,y,n[2])
     print("----------------------------------------")
+    printMaze(z)
 
 
 
