@@ -54,13 +54,13 @@ def createMazeAux(maze, s, g):
 def SolveWeights(maze, s):
     visited = [[0 for _ in range(10)] for _ in range(10)]
     weights = [[float('inf') for _ in range(10)] for _ in range(10)]
-    stack = []
-    stack.append(s)
-    visited[s[0]][s[1]] = 1
+    queue1 = []
+    queue1.append(s)
     weights[s[0]][s[1]] = 1
 
-    while(stack):
-        point = stack[len(stack)-1]
+    while(queue1):
+        visited[queue1[0][0]][queue1[0][1]] = 1
+        point = queue1[0]
         x = point[1]
         y = point[0]
         listpoints = []
@@ -77,16 +77,21 @@ def SolveWeights(maze, s):
         if(y+1 < 10):
             if(visited[y+1][x] == 0 and not(maze[y+1][x] == 'x')):
                 listpoints.append([y+1,x])
-        
-        if(listpoints):
-            d = random.choice(listpoints)
 
-            stack.append([d[0],d[1]])
-            visited[d[0]][d[1]] = 1
-            if(weights[y][x]+1 >= weights[d[0]][d[1]]):
-                weights[d[0]][d[1]] = weights[y][x] + 1
-        else:
-            stack.pop()
+        if(listpoints and queue1):
+            queue1.extend(listpoints)
+            current = queue1[0]
+
+            for x in listpoints:
+                neweight = 1 + weights[current[0]][current[1]]
+                if( neweight < weights[x[0]][x[1]]):
+                    weights[x[0]][x[1]] = neweight
+
+        queue1.pop(0)
+
+                    
+            
+
     
     return weights
 
@@ -121,14 +126,22 @@ def SolveDFS(maze, weights, end):
         if(minweight == 1):
             break
         pathind = listpoints[w.index(minweight)]
-        maze[pathind[0]][pathind[1]] = '-'
+        maze[pathind[0]][pathind[1]] = '@'
         next = minweight
         x = pathind[1]
         y = pathind[0]
 
     return maze
 
-           
+
+def printsome(x,y,z):
+    z = SolveDFS(x, y, z)
+
+    for i in z:
+        for j in i:
+            print(j, end=" ")
+        print()
+
 for i in range(20):
     n = createMaze()
 
@@ -145,14 +158,13 @@ for i in range(20):
 
     for i in y:
         for j in i:
-            print(j, end=" ")
+            if(j != float('inf')):
+                print(j, end=" ")
+            else:
+                print('x', end=" ")
         print()
-    z = SolveDFS(x, y, n[2])
-
-    for i in z:
-        for j in i:
-            print(j, end=" ")
-        print()
+        
+    printsome(x,y,n[2])
 
 
 
