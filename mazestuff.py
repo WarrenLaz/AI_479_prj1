@@ -101,7 +101,6 @@ def SolveDFS(maze, weights, end):
     next = weights[end[0]][end[1]]
 
     while(not(next==1)):
-        print(next)
         listpoints = []
         w = []
         if(x-1 >= 0):
@@ -142,20 +141,23 @@ def printsome(x,y,z):
             print(j, end=" ")
         print()
 
+
+
 for i in range(20):
     n = createMaze()
 
     x = n[0]
+    print("----------------------------------------")
+    print("GENERATED MAZE: ")
 
-    print(x[1][1])
     for i in x:
         for j in i:
             print(j, end=" ")
         print()
 
-    print(n[1])
     y = SolveWeights(n[0], n[1])
-
+    print("----------------------------------------")
+    print("WEIGHTS: ")
     for i in y:
         for j in i:
             if(j != float('inf')):
@@ -163,8 +165,10 @@ for i in range(20):
             else:
                 print('x', end=" ")
         print()
-        
+    print("----------------------------------------")
+    print("SHORTEST PATH: ")
     printsome(x,y,n[2])
+    print("----------------------------------------")
 
 
 
