@@ -1,5 +1,6 @@
 import random
 import copy
+import time
 
 def checkBounds(x, y, w, l, visited, maze, listpoints):
         
