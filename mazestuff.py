@@ -20,8 +20,8 @@ def checkBounds(x, y, w, l, visited, maze, listpoints):
         return listpoints
 
 def createMaze(x, y): #10x10
-    l,w = (y,x)
-    maze = [['x' for _ in range(l)] for _ in range(w)]
+    l,w = (y,x) #x = 10, y = 5 therefore l = 5, w = 10
+    maze = [['x' for _ in range(w)] for _ in range(l)] #5x10
     
     start, end = ([random.randint(0,l-1), random.randint(0,w-1)], [random.randint(0,l-1), random.randint(0,w-1)])
 
@@ -37,7 +37,7 @@ def createMaze(x, y): #10x10
 def createMazeAux(maze, s):
     l = len(maze)
     w = len(maze[0])
-    visited = [[0 for _ in range(l)] for _ in range(w)]
+    visited = [[0 for _ in range(w)] for _ in range(l)]
     stack = []
     stack.append(s)
     visited[s[0]][s[1]] = 1
@@ -48,7 +48,7 @@ def createMazeAux(maze, s):
         y = point[0]
     
         listpoints = []
-        
+
         if(x-1 >= 0):
             if(visited[y][x-1] == 0):
                 listpoints.append([y,x-1])
@@ -81,12 +81,9 @@ def DFS(maze, s):
     w = len(maze[0])
 
     DFSmaze = copy.deepcopy(maze)
-    visited = [[0 for _ in range(l)] for _ in range(w)]
-    weights = [[float('inf') for _ in range(l)] for _ in range(w)]
+    visited = [[0 for _ in range(w)] for _ in range(l)]
     stack = []
     stack.append(s)
-    weights[s[0]][s[1]] = 1
-
     while(stack):
         point = stack[len(stack)-1]
         x = point[1]
@@ -94,7 +91,7 @@ def DFS(maze, s):
     
         listpoints = []
 
-        listpoints = checkBounds(x, y, l, w, visited, DFSmaze, listpoints)
+        listpoints = checkBounds(x, y, w, l, visited, DFSmaze, listpoints)
 
         if(listpoints):
             d = random.choice(listpoints)
@@ -103,7 +100,7 @@ def DFS(maze, s):
             visited[d[0]][d[1]] = 1
             if(DFSmaze[d[0]][d[1]] == 'G'):
                 break
-            else:
+            elif(not(DFSmaze[d[0]][d[1]] == 'S')):
                 DFSmaze[d[0]][d[1]] = '@'
         else:
             stack.pop()
@@ -115,7 +112,7 @@ def BFS(maze, s):
     w = len(maze[0])
 
     BFSmaze = copy.deepcopy(maze)
-    visited = [[0 for _ in range(l)] for _ in range(w)]
+    visited = [[0 for _ in range(w)] for _ in range(l)]
     queue1 = []
     queue1.append(s)
 
@@ -126,7 +123,7 @@ def BFS(maze, s):
         y = point[0]
         listpoints = []
 
-        listpoints = checkBounds(x,y, l, w, visited, BFSmaze, listpoints)
+        listpoints = checkBounds(x,y, w, l, visited, BFSmaze, listpoints)
 
         if(listpoints and queue1):
             for h in listpoints:
@@ -135,7 +132,7 @@ def BFS(maze, s):
 
             current = queue1[0]
 
-            if(not(BFSmaze[current[0]][current[1]] == 'S')):
+            if(not(BFSmaze[current[0]][current[1]] == 'S' or BFSmaze[current[0]][current[1]] == 'G')):
                 BFSmaze[current[0]][current[1]] = '@'
 
             if(BFSmaze[current[0]][current[1]] == 'G'):
@@ -151,8 +148,8 @@ def Djikstras(maze, s, end):
     l = len(maze)
     w = len(maze[0])
     Dijkstrasmaze = copy.deepcopy(maze)
-    visited = [[0 for _ in range(l)] for _ in range(w)]
-    weights = [[float('inf') for _ in range(l)] for _ in range(w)]
+    visited = [[0 for _ in range(w)] for _ in range(l)]
+    weights = [[float('inf') for _ in range(w)] for _ in range(l)]
     queue1 = []
     queue1.append(s)
     weights[s[0]][s[1]] = 1
@@ -164,7 +161,7 @@ def Djikstras(maze, s, end):
         y = point[0]
         listpoints = []
 
-        listpoints = checkBounds(x,y, l, w, visited, Dijkstrasmaze, listpoints)
+        listpoints = checkBounds(x,y, w, l, visited, Dijkstrasmaze, listpoints)
 
         if(listpoints and queue1):
             for h in listpoints:
@@ -191,9 +188,6 @@ def AuxDjikstras(maze, weights, end):
     w = len(maze[0])
 
     BFSmaze = maze.copy()
-
-
-
     x = end[1]
     y = end[0]
     next = weights[end[0]][end[1]]
@@ -238,7 +232,7 @@ def Astar(maze, s, g):
     l = len(maze)
     w = len(maze[0])
     Astarmaze = copy.deepcopy(maze)
-    visited = [[0 for _ in range(l)] for _ in range(w)]
+    visited = [[0 for _ in range(w)] for _ in range(l)]
     queue1 = []
     queue1.append(s)
     
@@ -249,7 +243,7 @@ def Astar(maze, s, g):
 
         listpoints = []
 
-        listpoints = checkBounds(x, y, l, w, visited, Astarmaze, listpoints)
+        listpoints = checkBounds(x, y, w, l, visited, Astarmaze, listpoints)
 
         if(listpoints):
             hlist = []
@@ -269,7 +263,7 @@ def Astar(maze, s, g):
                 if(Astarmaze[d[0]][d[1]] == 'G'):
                     queue1.clear()
                     break
-                elif(not(Astarmaze[d[0]][d[1]] == 'S')):
+                elif(not(Astarmaze[d[0]][d[1]] == 'S' or Astarmaze[d[0]][d[1]] == 'G')):
                     Astarmaze[d[0]][d[1]] = '@'
         if(queue1):
             heapq.heappop(queue1)
@@ -286,7 +280,7 @@ def main():
     x = 10
     for i in range(20):
         
-        n = createMaze(x,x)
+        n = createMaze(15,10)
         maze = n[0].copy()
         q = DFS(copy.deepcopy(maze), n[1])
         r = Astar(copy.deepcopy(maze), n[1], n[2])
@@ -303,14 +297,15 @@ def main():
         print("SHORTEST PATH BFS: ")
         printMaze(y)
         print("----------------------------------------")
-        print("SHORTEST PATH Djikstras: ")
-        print("----------------------------------------")
-        printMaze(z)
-        print("----------------------------------------")
         print("SHORTEST PATH A*: ")
         printMaze(r)
+        print("----------------------------------------")
+        print("SHORTEST PATH: ")
+        printMaze(z)
+        print("----------------------------------------")
         print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
         x = x + 1
+
 if __name__ == '__main__':
     main()  
 
