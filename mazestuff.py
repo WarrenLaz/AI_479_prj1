@@ -1,6 +1,6 @@
 import random
 import copy
-import time
+import heapq
 
 def checkBounds(x, y, w, l, visited, maze, listpoints):
         
@@ -23,9 +23,13 @@ def createMaze(x, y): #10x10
     l,w = (y,x)
     maze = [['x' for _ in range(l)] for _ in range(w)]
     
-    start, end = ([random.randint(0,l), random.randint(0,w)], [random.randint(0,l), random.randint(0,w)])
+    start, end = ([random.randint(0,l-1), random.randint(0,w-1)], [random.randint(0,l-1), random.randint(0,w-1)])
+
+    while(start[0] == end[0] and start[1] == end[1]):
+        end =  [random.randint(0,l-1), random.randint(0,w-1)]
 
     maze[start[0]][start[1]] = 'S'
+
     maze[end[0]][end[1]] = 'G'
 
     return [createMazeAux(maze, start) , start, end]
@@ -180,11 +184,16 @@ def Djikstras(maze, s, end):
 
     return AuxDjikstras(Dijkstrasmaze, weights, end)
 
+
+
 def AuxDjikstras(maze, weights, end):
     l = len(maze)
     w = len(maze[0])
 
     BFSmaze = maze.copy()
+
+
+
     x = end[1]
     y = end[0]
     next = weights[end[0]][end[1]]
@@ -218,6 +227,7 @@ def AuxDjikstras(maze, weights, end):
         next = minweight
         x = pathind[1]
         y = pathind[0]
+
 
     return BFSmaze
 
@@ -253,7 +263,7 @@ def Astar(maze, s, g):
                 if not(hlist.index(d) == listpoints.index(choice[0]) and hlist[0] == d):
                     choice.append(listpoints[hlist.index(d)])
             for d in choice:
-                queue1.append(d)
+                heapq.heappush(queue1, d)
                 visited[d[0]][d[1]] = 1
             
                 if(Astarmaze[d[0]][d[1]] == 'G'):
@@ -262,24 +272,21 @@ def Astar(maze, s, g):
                 elif(not(Astarmaze[d[0]][d[1]] == 'S')):
                     Astarmaze[d[0]][d[1]] = '@'
         if(queue1):
-            queue1.pop(0)
+            heapq.heappop(queue1)
     
     return Astarmaze.copy()
 
-def printMaze(x, f): 
+def printMaze(x): 
     for i in x:
         for j in i:
             print(j, end=" ")
-            f.write(j+' ')
         print()
-        f.write('\n')
-
 
 def main():
-    outputFile = open('output.txt', 'w')
-    
-    for i in range(10):
-        n = createMaze(50,50)
+    x = 10
+    for i in range(20):
+        
+        n = createMaze(x,x)
         maze = n[0].copy()
         q = DFS(copy.deepcopy(maze), n[1])
         r = Astar(copy.deepcopy(maze), n[1], n[2])
@@ -288,28 +295,22 @@ def main():
 
         print("----------------------------------------")
         print("GENERATED MAZE: ")
-        outputFile.write("----------------------------------------\nGENERATED MAZE:\n")
-        printMaze(maze, outputFile)
+        printMaze(maze)
         print("----------------------------------------")
         print("SHORTEST PATH DFS: ")
-        outputFile.write("----------------------------------------\nSHORTEST PATH DFS: \n")
-        printMaze(q, outputFile)
+        printMaze(q)
         print("----------------------------------------")
         print("SHORTEST PATH BFS: ")
-        outputFile.write("----------------------------------------\nSHORTEST PATH BFS: \n")
-        printMaze(y, outputFile)
+        printMaze(y)
         print("----------------------------------------")
         print("SHORTEST PATH Djikstras: ")
         print("----------------------------------------")
-        outputFile.write("----------------------------------------\nSHORTEST PATH Djikstras: \n")
-        printMaze(z, outputFile)
+        printMaze(z)
         print("----------------------------------------")
         print("SHORTEST PATH A*: ")
-        outputFile.write("----------------------------------------\nSHORTEST PATH A*: \n")
-        printMaze(r, outputFile)
+        printMaze(r)
         print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
-    outputFile.close()
-
+        x = x + 1
 if __name__ == '__main__':
     main()  
 
