@@ -1,9 +1,8 @@
 import random
 import copy
-import heapq
+import heapq as h
 
 def checkBounds(x, y, w, l, visited, maze, listpoints):
-        
         if(x-1 >= 0):
             if(visited[y][x-1] == 0 and not(maze[y][x-1] == 'x') ):
                 listpoints.append([y,x-1])
@@ -99,13 +98,13 @@ def DFS(maze, s):
             stack.append([d[0],d[1]])
             visited[d[0]][d[1]] = 1
             if(DFSmaze[d[0]][d[1]] == 'G'):
-                break
+                return DFSmaze
             elif(not(DFSmaze[d[0]][d[1]] == 'S')):
                 DFSmaze[d[0]][d[1]] = '@'
         else:
             stack.pop()
     
-    return DFSmaze.copy()
+    return DFSmaze
 
 def BFS(maze, s):
     l = len(maze)
@@ -125,7 +124,7 @@ def BFS(maze, s):
 
         listpoints = checkBounds(x,y, w, l, visited, BFSmaze, listpoints)
 
-        if(listpoints and queue1):
+        if(listpoints):
             for h in listpoints:
                 if(not(h in queue1)):
                     queue1.append(h)
@@ -136,8 +135,8 @@ def BFS(maze, s):
                 BFSmaze[current[0]][current[1]] = '@'
 
             if(BFSmaze[current[0]][current[1]] == 'G'):
-                queue1.clear()
-                break
+                return BFSmaze
+
 
         if(queue1):
             queue1.pop(0)
@@ -234,39 +233,39 @@ def Astar(maze, s, g):
     Astarmaze = copy.deepcopy(maze)
     visited = [[0 for _ in range(w)] for _ in range(l)]
     queue1 = []
-    queue1.append(s)
-    
+    h.heappush(queue1, (Heuristic(s[0], g[0], s[1], g[1]), s))
+    visited[s[0]][s[1]] = 1
+
     while(queue1):
-        point = queue1[0]
+        point = queue1[0][1]
         x = point[1]
         y = point[0]
-
         listpoints = []
+        visited[y][x] = 1
 
         listpoints = checkBounds(x, y, w, l, visited, Astarmaze, listpoints)
 
         if(listpoints):
             hlist = []
             choice = []
-            for d in listpoints:
-                hlist.append(Heuristic(d[0], g[0], d[1], g[1]))
+            for h in listpoints:
+                hlist.append(Heuristic(h[0], g[0], h[1], g[1]))
             
-            choice.append(listpoints[hlist.index(min(hlist))])
+            minval = min(hlist)
+            choice.append((minval, listpoints[hlist.index(minval)]))
 
             for d in hlist:
-                if not(hlist.index(d) == listpoints.index(choice[0]) and hlist[0] == d):
-                    choice.append(listpoints[hlist.index(d)])
-            for d in choice:
-                heapq.heappush(queue1, d)
-                visited[d[0]][d[1]] = 1
-            
-                if(Astarmaze[d[0]][d[1]] == 'G'):
-                    queue1.clear()
-                    break
-                elif(not(Astarmaze[d[0]][d[1]] == 'S' or Astarmaze[d[0]][d[1]] == 'G')):
-                    Astarmaze[d[0]][d[1]] = '@'
+                if not(hlist.index(d) == listpoints.index(choice[0][1]) and hlist[0] == d):
+                    choice.append((d, listpoints[hlist.index(d)]))
+            for c in choice:
+                if(not(c in queue1) and c[0] < queue1[0][0]):
+                    h.heappush(queue1, c)
+                if(Astarmaze[c[1][0]][c[1][1]] == 'G'):
+                    return Astarmaze.copy()
+                elif(not(Astarmaze[c[1][0]][c[1][1]] == 'S' or Astarmaze[c[1][0]][c[1][1]] == 'G')):
+                    Astarmaze[c[1][0]][c[1][1]] = '@'
         if(queue1):
-            heapq.heappop(queue1)
+            h.heappop(queue1)
     
     return Astarmaze.copy()
 
@@ -283,7 +282,7 @@ def main():
         n = createMaze(15,10)
         maze = n[0].copy()
         q = DFS(copy.deepcopy(maze), n[1])
-        r = Astar(copy.deepcopy(maze), n[1], n[2])
+        #r = Astar(copy.deepcopy(maze), n[1], n[2])
         y = BFS(copy.deepcopy(maze), n[1])
         z = Djikstras(copy.deepcopy(maze), n[1], n[2])
 
@@ -298,7 +297,7 @@ def main():
         printMaze(y)
         print("----------------------------------------")
         print("SHORTEST PATH A*: ")
-        printMaze(r)
+        #printMaze(r)
         print("----------------------------------------")
         print("SHORTEST PATH: ")
         printMaze(z)
