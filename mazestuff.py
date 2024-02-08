@@ -278,7 +278,17 @@ def Astar(maze, s, g):
     
     return Astarmaze.copy()
 
+def printMaze(x, f): 
+    for i in x:
+        for j in i:
+            print(j, end=" ")
+            f.write(j+' ')
+        print()
+        f.write('\n')
+
 def main():
+    outputFile = open('output.txt', 'w')
+
     x = 10
     for i in range(20):
         
@@ -291,21 +301,29 @@ def main():
 
         print("----------------------------------------")
         print("GENERATED MAZE: ")
-        printMaze(maze)
+        outputFile.write("----------------------------------------\nGENERATED MAZE:\n")
+        printMaze(maze, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH DFS: ")
-        printMaze(q)
+        outputFile.write("----------------------------------------\nSHORTEST PATH DFS: \n")
+        printMaze(q, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH BFS: ")
-        printMaze(y)
+        outputFile.write("----------------------------------------\nSHORTEST PATH BFS: \n")
+        printMaze(y, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH A*: ")
-        printMaze(r)
+        #outputFile.write("----------------------------------------\nSHORTEST PATH A*: \n")
+        #printMaze(r, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH: ")
-        printMaze(z)
+        outputFile.write("----------------------------------------\nSHORTEST PATH Djikstras: \n")
+        printMaze(z, outputFile)
         print("----------------------------------------")
         print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
+        x = x + 1
+    
+    outputFile.close()
 
 if __name__ == '__main__':
     main()  
