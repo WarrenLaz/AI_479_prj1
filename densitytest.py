@@ -285,7 +285,7 @@ def printMaze(x):
 def main():
     x = 10
     for i in range(1):
-        density = .99
+        density = .50
         # W , L , Density
         n = createMaze(10,10, density)
         maze = n[0].copy()

@@ -1,6 +1,14 @@
 import random
 import copy
 import heapq as h
+import time
+
+
+def printMaze(x): 
+    for i in x:
+        for j in i:
+            print(j, end=" ")
+        print()
 
 def checkBounds(x, y, w, l, visited, maze, listpoints):
         if(x-1 >= 0):
@@ -18,9 +26,11 @@ def checkBounds(x, y, w, l, visited, maze, listpoints):
         
         return listpoints
 
-def createMaze(x, y): #10x10
-    l,w = (y,x) #x = 10, y = 5 therefore l = 5, w = 10
-    maze = [['x' for _ in range(w)] for _ in range(l)] #5x10
+def createMaze(x, y): 
+    #Create Maze function
+    l,w = (y,x) 
+    #Create an array filled with x's 
+    maze = [['x' for _ in range(w)] for _ in range(l)] 
     
     start, end = ([random.randint(0,l-1), random.randint(0,w-1)], [random.randint(0,l-1), random.randint(0,w-1)])
 
@@ -180,8 +190,6 @@ def Djikstras(maze, s, end):
 
     return AuxDjikstras(Dijkstrasmaze, weights, end)
 
-
-
 def AuxDjikstras(maze, weights, end):
     l = len(maze)
     w = len(maze[0])
@@ -233,8 +241,8 @@ def Astar(maze, s, g):
     Astarmaze = copy.deepcopy(maze)
     visited = [[0 for _ in range(w)] for _ in range(l)]
     queue1 = []
-    h.heappush(queue1, (Heuristic(s[0], g[0], s[1], g[1]), s))
-    visited[s[0]][s[1]] = 1
+    queue1.append((Heuristic(s[0], g[0], s[1], g[1]), s))
+    h.heapify(queue1)
 
     while(queue1):
         point = queue1[0][1]
@@ -248,8 +256,8 @@ def Astar(maze, s, g):
         if(listpoints):
             hlist = []
             choice = []
-            for h in listpoints:
-                hlist.append(Heuristic(h[0], g[0], h[1], g[1]))
+            for f in listpoints:
+                hlist.append(Heuristic(f[0], g[0], f[1], g[1]))
             
             minval = min(hlist)
             choice.append((minval, listpoints[hlist.index(minval)]))
@@ -257,32 +265,27 @@ def Astar(maze, s, g):
             for d in hlist:
                 if not(hlist.index(d) == listpoints.index(choice[0][1]) and hlist[0] == d):
                     choice.append((d, listpoints[hlist.index(d)]))
+                
             for c in choice:
-                if(not(c in queue1) and c[0] < queue1[0][0]):
-                    h.heappush(queue1, c)
+                if(not(c in queue1) and c[0] <= queue1[0][0]):
+                   queue1.append(c)
                 if(Astarmaze[c[1][0]][c[1][1]] == 'G'):
                     return Astarmaze.copy()
                 elif(not(Astarmaze[c[1][0]][c[1][1]] == 'S' or Astarmaze[c[1][0]][c[1][1]] == 'G')):
-                    Astarmaze[c[1][0]][c[1][1]] = '@'
-        if(queue1):
-            h.heappop(queue1)
+                    Astarmaze[c[1][0]][c[1][1]] = '@' 
+            if(queue1):
+                queue1.pop(0)
     
     return Astarmaze.copy()
-
-def printMaze(x): 
-    for i in x:
-        for j in i:
-            print(j, end=" ")
-        print()
 
 def main():
     x = 10
     for i in range(20):
         
-        n = createMaze(15,10)
+        n = createMaze(10,10)
         maze = n[0].copy()
         q = DFS(copy.deepcopy(maze), n[1])
-        #r = Astar(copy.deepcopy(maze), n[1], n[2])
+        r = Astar(copy.deepcopy(maze), n[1], n[2])
         y = BFS(copy.deepcopy(maze), n[1])
         z = Djikstras(copy.deepcopy(maze), n[1], n[2])
 
@@ -297,13 +300,12 @@ def main():
         printMaze(y)
         print("----------------------------------------")
         print("SHORTEST PATH A*: ")
-        #printMaze(r)
+        printMaze(r)
         print("----------------------------------------")
         print("SHORTEST PATH: ")
         printMaze(z)
         print("----------------------------------------")
         print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
-        x = x + 1
 
 if __name__ == '__main__':
     main()  
