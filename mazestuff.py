@@ -238,6 +238,9 @@ def AuxDjikstras(maze, weights, end):
 def Heuristic(x1, x2, y1, y2):
     return  math.sqrt( (x1 - x2)**2 + ((y1 - y2)**2))
 
+def Heuristic2(x1, x2, y1, y2):
+    return  abs(x1 - x2) + abs(y1 - y2)
+
 def Astar(maze, s, g):
     fn = 0
     l = len(maze)
@@ -248,7 +251,7 @@ def Astar(maze, s, g):
 
     queue1.append((Heuristic(s[0], g[0], s[1], g[1]), s))
 
-    #h.heapify(queue1)
+    h.heapify(queue1)
 
     while(queue1):
         point = queue1[0][1]
@@ -265,15 +268,17 @@ def Astar(maze, s, g):
             for f in listpoints:
                 hlist.append(Heuristic(f[0], g[0], f[1], g[1]))
             
+            #print(hlist)
+            #print(listpoints)
             minval = min(hlist)
-            choice.append((minval, listpoints[hlist.index(minval)]))
 
-            for d in hlist:
-                if(d == minval and not(choice[0][1] == listpoints[hlist.index(d)])):
-                    choice.append((d, listpoints[hlist.index(d)]))
-
+            for i in range(len(listpoints)):
+                if(hlist[i] == minval):
+                    choice.append((minval, listpoints[i]))
+            
+            print(choice)
             for c in choice:
-                if(not(c in queue1)):
+                if(not(c[1] in queue1)):
                    queue1.append(c)
                 if(Astarmaze[c[1][0]][c[1][1]] == 'G'):
                     return Astarmaze.copy()
@@ -296,7 +301,7 @@ def main():
     dmaze = [['S','.','.','.','.','.','.','.','.','.'],
              ['.','x','x','.','x','x','x','x','x','.'],
              ['.','x','x','.','x','x','x','x','x','.'],
-             ['.','.','.','.','.','.','.','.','.','.'],
+             ['.','.','.','.','.','.','.','.','.','x'],
              ['x','x','x','x','x','.','x','x','x','.'],
              ['x','x','x','x','x','.','.','.','x','.'],
              ['x','x','x','x','x','x','x','.','x','.'],
@@ -325,7 +330,6 @@ def main():
 
         print("----------------------------------------")
         print("GENERATED MAZE: ")
-    
         outputFile.write("----------------------------------------\nGENERATED MAZE:\n")
         printMaze(maze, outputFile)
         print("----------------------------------------")

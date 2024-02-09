@@ -1,0 +1,1200 @@
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x G . S 
+x x x x x x x . . x 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x G @ S 
+x x x x x x x . . x 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x G @ S 
+x x x x x x x . . x 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x G @ S 
+x x x x x x x . . x 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x G @ S 
+x x x x x x x . . x 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x . . . x x x 
+x x x x . S . x . . 
+x x x x x x . . . . 
+x x x x x . . . x . 
+x x x x x G x . x . 
+x x x x x x x . . . 
+x x x x x . . . . x 
+x x x x x . . . . x 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x . . . x x x 
+x x x x . S @ x @ @ 
+x x x x x x @ @ @ @ 
+x x x x x @ @ @ x @ 
+x x x x x G x @ x @ 
+x x x x x x x @ @ @ 
+x x x x x @ @ @ @ x 
+x x x x x @ @ @ @ x 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x . @ . x x x 
+x x x x @ S @ x @ . 
+x x x x x x @ @ @ @ 
+x x x x x @ @ @ x @ 
+x x x x x G x @ x @ 
+x x x x x x x @ @ . 
+x x x x x @ @ @ @ x 
+x x x x x . @ @ . x 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x @ @ @ x x x 
+x x x x @ S @ x . . 
+x x x x x x @ . . . 
+x x x x x @ @ . x . 
+x x x x x G x . x . 
+x x x x x x x . . . 
+x x x x x . . . . x 
+x x x x x . . . . x 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x . . . x x x 
+x x x x . S @ x . . 
+x x x x x x @ . . . 
+x x x x x @ @ . x . 
+x x x x x G x . x . 
+x x x x x x x . . . 
+x x x x x . . . . x 
+x x x x x . . . . x 
+----------------------------------------
+GENERATED MAZE:
+x x . . . . . . . . 
+x x G . . . . . . . 
+x x x . . . . . . . 
+x x x . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+S . . . . . x x x x 
+x x . . . . . . . x 
+. . . . . . . . . . 
+. . . . . x . . . . 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x . @ @ @ @ @ @ @ 
+x x G @ @ @ @ @ @ @ 
+x x x @ @ @ @ @ @ @ 
+x x x @ @ @ . @ @ @ 
+@ @ @ @ @ @ @ @ @ @ 
+@ @ @ @ @ @ . . @ @ 
+S @ @ @ @ @ x x x x 
+x x @ @ @ @ @ . . x 
+@ @ @ @ @ @ @ . . . 
+@ @ @ @ . x . . . . 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x . . . . . . . . 
+x x G @ @ . . . . . 
+x x x @ @ @ . . . . 
+x x x @ @ @ @ . . . 
+@ @ @ @ @ @ @ @ . . 
+@ @ @ @ @ @ @ @ @ . 
+S @ @ @ @ @ x x x x 
+x x @ @ @ @ @ @ @ x 
+@ @ @ @ @ @ @ @ . . 
+. @ @ @ . x @ . . . 
+----------------------------------------
+SHORTEST PATH A*: 
+x x . . . . . . . . 
+x x G @ . . . . . . 
+x x x @ . . . . . . 
+x x x @ . . . . . . 
+@ @ @ @ . . . . . . 
+@ . . . . . . . . . 
+S . . . . . x x x x 
+x x . . . . . . . x 
+. . . . . . . . . . 
+. . . . . x . . . . 
+----------------------------------------
+SHORTEST PATH: 
+x x . . . . . . . . 
+x x G @ . . . . . . 
+x x x @ . . . . . . 
+x x x @ . . . . . . 
+@ @ @ @ . . . . . . 
+@ . . . . . . . . . 
+S . . . . . x x x x 
+x x . . . . . . . x 
+. . . . . . . . . . 
+. . . . . x . . . . 
+----------------------------------------
+GENERATED MAZE:
+x x x . . . . . . . 
+x x x G . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . S . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+x x . . . . . . . . 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x . @ @ @ @ @ @ 
+x x x G @ @ @ @ @ @ 
+. . . . . @ @ @ @ @ 
+. . . @ @ @ @ @ @ @ 
+. . . @ S @ @ @ @ @ 
+. . . @ @ @ @ @ @ @ 
+. @ @ @ . @ @ . @ @ 
+@ @ @ @ . @ @ @ @ @ 
+@ @ @ @ . @ @ @ @ @ 
+x x . @ @ @ @ @ @ @ 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x . . . . . . . 
+x x x G @ . . . . . 
+. . @ @ @ @ . . . . 
+. @ @ @ @ @ @ . . . 
+@ @ @ @ S @ @ @ . . 
+. @ @ @ @ @ @ . . . 
+. . @ @ @ @ . . . . 
+. . . . @ . . . . . 
+. . . . . . . . . . 
+x x . . . . . . . . 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x . . . . . . . 
+x x x G @ . . . . . 
+. . . @ @ . . . . . 
+. . . . @ . . . . . 
+. . . . S . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+x x . . . . . . . . 
+----------------------------------------
+SHORTEST PATH: 
+x x x . . . . . . . 
+x x x G @ . . . . . 
+. . . . @ . . . . . 
+. . . . @ . . . . . 
+. . . . S . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+x x . . . . . . . . 
+----------------------------------------
+GENERATED MAZE:
+x x S . . . . x x x 
+x . . . . . . . x x 
+x . . . . . . . x x 
+x . . . . . . . . x 
+x . . . . . . x . . 
+x x . . . . x x x . 
+x x . . . . . . . . 
+x x . . . . . . . G 
+x x x x . . . . . . 
+x x x x . . . . . . 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x S @ . @ @ x x x 
+x @ @ . @ @ @ @ x x 
+x @ @ @ @ @ @ @ x x 
+x @ @ @ @ @ . . . x 
+x @ @ @ @ @ . x . . 
+x x @ @ @ @ x x x . 
+x x @ @ @ @ @ @ . . 
+x x @ @ @ @ @ @ @ G 
+x x x x @ @ @ @ @ @ 
+x x x x @ @ @ @ @ @ 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x S @ @ @ @ x x x 
+x @ @ @ @ @ @ @ x x 
+x @ @ @ @ @ @ @ x x 
+x @ @ @ @ @ @ @ @ x 
+x . @ @ @ @ . x @ @ 
+x x @ @ @ @ x x x @ 
+x x @ @ @ @ @ @ @ @ 
+x x @ @ @ @ @ @ @ G 
+x x x x @ @ @ @ . . 
+x x x x @ @ @ . . . 
+----------------------------------------
+SHORTEST PATH A*: 
+x x S @ . . . x x x 
+x . @ @ @ . . . x x 
+x . . @ @ @ . . x x 
+x . . . @ @ @ . . x 
+x . . . . @ @ x . . 
+x x . . . . x x x . 
+x x . . . . . . . . 
+x x . . . . . . . G 
+x x x x . . . . . . 
+x x x x . . . . . . 
+----------------------------------------
+SHORTEST PATH: 
+x x S . . . . x x x 
+x . @ . . . . . x x 
+x . @ . . . . . x x 
+x . @ . . . . . . x 
+x . @ . . . . x . . 
+x x @ . . . x x x . 
+x x @ . . . . . . . 
+x x @ @ @ @ @ @ @ G 
+x x x x . . . . . . 
+x x x x . . . . . . 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x S . . . . . . 
+x x x x x x . . . . 
+x x x x x x . . . . 
+x x x x x x G x . . 
+x x x x x x x x . . 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x S @ @ @ @ @ @ 
+x x x x x x @ @ @ @ 
+x x x x x x @ @ @ @ 
+x x x x x x G x @ @ 
+x x x x x x x x @ @ 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x S @ @ @ @ @ @ 
+x x x x x x @ @ @ @ 
+x x x x x x @ @ @ @ 
+x x x x x x G x @ @ 
+x x x x x x x x @ . 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x S @ @ @ . . . 
+x x x x x x @ . . . 
+x x x x x x @ . . . 
+x x x x x x G x . . 
+x x x x x x x x . . 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x S @ @ @ . . . 
+x x x x x x @ . . . 
+x x x x x x @ . . . 
+x x x x x x G x . . 
+x x x x x x x x . . 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x x x x 
+x x x x x x x x x S 
+x x x x x x x x x . 
+x x x x x x x x x . 
+x x x x x x . . . . 
+x x x x x G . x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x x x x 
+x x x x x x x x x S 
+x x x x x x x x x @ 
+x x x x x x x x x @ 
+x x x x x x @ @ @ @ 
+x x x x x G @ x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x x x x 
+x x x x x x x x x S 
+x x x x x x x x x @ 
+x x x x x x x x x @ 
+x x x x x x @ @ @ @ 
+x x x x x G @ x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x x x x 
+x x x x x x x x x S 
+x x x x x x x x x @ 
+x x x x x x x x x @ 
+x x x x x x @ @ @ @ 
+x x x x x G @ x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x x x x 
+x x x x x x x x x S 
+x x x x x x x x x @ 
+x x x x x x x x x @ 
+x x x x x x @ @ @ @ 
+x x x x x G @ x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+GENERATED MAZE:
+. . . . . . . . x x 
+. . . . . . . . x x 
+. . x . . x x . . . 
+. . . . . x G . . . 
+. . . . . . . x . . 
+. . . . . . x x . . 
+. . S x x x x x x . 
+. . . . x . . x . . 
+x x . . x . . x . . 
+x x . . . . . . . . 
+----------------------------------------
+SHORTEST PATH DFS: 
+. . . . . . . . x x 
+. . . . . . . . x x 
+. . x . . x x . . . 
+. . . . . x G @ @ . 
+. . . . . . . x @ @ 
+. . . . . . x x @ @ 
+. . S x x x x x x @ 
+. . @ . x @ @ x @ @ 
+x x @ . x @ @ x @ @ 
+x x @ @ @ @ @ @ @ @ 
+----------------------------------------
+SHORTEST PATH BFS: 
+. @ . . . . . . x x 
+@ @ @ @ . . . . x x 
+@ @ x @ @ x x . . . 
+@ @ @ @ @ x G . . . 
+@ @ @ @ @ @ @ x . . 
+@ @ @ @ @ @ x x . . 
+@ @ S x x x x x x . 
+. @ @ @ x . . x . . 
+x x @ @ x . . x . . 
+x x @ @ @ @ . . . . 
+----------------------------------------
+SHORTEST PATH A*: 
+. . . . . . . . x x 
+. . . . . . . . x x 
+. . x . . x x . . . 
+. . . . . x G . . . 
+. . . . @ @ @ x . . 
+. . @ @ @ @ x x . . 
+. . S x x x x x x . 
+. . . . x . . x . . 
+x x . . x . . x . . 
+x x . . . . . . . . 
+----------------------------------------
+SHORTEST PATH: 
+. . . . . . . . x x 
+. . . . . . . . x x 
+. . x . . x x . . . 
+. . . . . x G . . . 
+. . @ @ @ @ @ x . . 
+. . @ . . . x x . . 
+. . S x x x x x x . 
+. . . . x . . x . . 
+x x . . x . . x . . 
+x x . . . . . . . . 
+----------------------------------------
+GENERATED MAZE:
+x x . . . x x x x x 
+x x . . . x x x x x 
+. . . . . x x x x x 
+. x x x S x x x x x 
+. x x x x x x x x x 
+. . . x x x x x x x 
+x x . x x x x x x x 
+. . . x x x x x x x 
+. . x x x x x x x x 
+x G x x x x x x x x 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x @ @ @ x x x x x 
+x x @ @ @ x x x x x 
+@ @ @ @ @ x x x x x 
+@ x x x S x x x x x 
+@ x x x x x x x x x 
+@ @ @ x x x x x x x 
+x x @ x x x x x x x 
+@ @ @ x x x x x x x 
+@ @ x x x x x x x x 
+x G x x x x x x x x 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x . @ @ x x x x x 
+x x @ @ @ x x x x x 
+@ @ @ @ @ x x x x x 
+@ x x x S x x x x x 
+@ x x x x x x x x x 
+@ @ @ x x x x x x x 
+x x @ x x x x x x x 
+@ @ @ x x x x x x x 
+. @ x x x x x x x x 
+x G x x x x x x x x 
+----------------------------------------
+SHORTEST PATH A*: 
+x x . . . x x x x x 
+x x . . . x x x x x 
+@ @ @ @ @ x x x x x 
+@ x x x S x x x x x 
+@ x x x x x x x x x 
+@ @ @ x x x x x x x 
+x x @ x x x x x x x 
+. @ @ x x x x x x x 
+. @ x x x x x x x x 
+x G x x x x x x x x 
+----------------------------------------
+SHORTEST PATH: 
+x x . . . x x x x x 
+x x . . . x x x x x 
+@ @ @ @ @ x x x x x 
+@ x x x S x x x x x 
+@ x x x x x x x x x 
+@ @ @ x x x x x x x 
+x x @ x x x x x x x 
+. @ @ x x x x x x x 
+. @ x x x x x x x x 
+x G x x x x x x x x 
+----------------------------------------
+GENERATED MAZE:
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . x . . . 
+. . . . . . . . . . 
+. . . . . . . . x x 
+. . . . . . . . x x 
+S x . . . . . . x x 
+x x . . . . . . x x 
+x x x x x G . . x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH DFS: 
+. . @ @ @ @ @ @ @ @ 
+. . @ @ @ @ @ @ @ @ 
+. . @ @ @ @ x @ @ @ 
+@ @ @ @ @ @ @ @ @ @ 
+@ @ @ @ @ @ . @ x x 
+@ @ @ @ @ . . @ x x 
+S x @ . @ . @ @ x x 
+x x @ @ @ . @ . x x 
+x x x x x G @ . x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH BFS: 
+@ @ @ . . . . . . . 
+@ @ @ @ . . . . . . 
+@ @ @ @ @ @ x . . . 
+@ @ @ @ @ @ @ . . . 
+@ @ @ @ @ @ @ @ x x 
+@ @ @ @ @ @ @ @ x x 
+S x @ @ @ @ @ @ x x 
+x x @ @ @ @ @ . x x 
+x x x x x G . . x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH A*: 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . x . . . 
+. . . . . . . . . . 
+. . . . . . . . x x 
+@ @ @ @ . . . . x x 
+S x @ @ @ . . . x x 
+x x . @ @ @ . . x x 
+x x x x x G . . x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH: 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . x . . . 
+. . . . . . . . . . 
+. . . . . . . . x x 
+@ @ @ . . . . . x x 
+S x @ . . . . . x x 
+x x @ @ @ @ . . x x 
+x x x x x G . . x x 
+x x x x x x x x x x 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x . . . 
+x x x x x x x . . . 
+x x x x x x x . . . 
+x x x x x . . . . . 
+x x x x x . . . . . 
+x x x x G . . . . . 
+x x x x x x x . . . 
+x x x x x . . . . . 
+x x x x x . . . . S 
+x x x x x . . . . . 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x @ @ @ 
+x x x x x x x @ @ @ 
+x x x x x x x @ @ @ 
+x x x x x @ @ @ @ @ 
+x x x x x @ @ @ @ @ 
+x x x x G @ @ @ @ @ 
+x x x x x x x @ @ @ 
+x x x x x @ @ @ @ @ 
+x x x x x @ @ @ @ S 
+x x x x x @ @ @ @ @ 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x . @ @ 
+x x x x x x x @ @ @ 
+x x x x x x x @ @ @ 
+x x x x x . @ @ @ @ 
+x x x x x @ @ @ @ @ 
+x x x x G @ @ @ @ @ 
+x x x x x x x @ @ @ 
+x x x x x . @ @ @ @ 
+x x x x x @ @ @ @ S 
+x x x x x . @ @ @ @ 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x . . . 
+x x x x x x x . . . 
+x x x x x x x . . . 
+x x x x x . . . . . 
+x x x x x . . . . . 
+x x x x G . . . . . 
+x x x x x x x . . . 
+x x x x x @ @ @ . . 
+x x x x x @ @ @ @ S 
+x x x x x @ @ @ @ @ 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x . . . 
+x x x x x x x . . . 
+x x x x x x x . . . 
+x x x x x . . . . . 
+x x x x x . . . . . 
+x x x x G @ @ @ @ @ 
+x x x x x x x . . @ 
+x x x x x . . . . @ 
+x x x x x . . . . S 
+x x x x x . . . . . 
+----------------------------------------
+GENERATED MAZE:
+. . . x . . x x x x 
+. . . . . . . . x x 
+. . . . . . S . x x 
+x . . . . . . . . . 
+x . . . . . . . . . 
+x . x . . . . . . . 
+. . x . x . . . . . 
+. x x . . . x x . . 
+. . . . x . . . . x 
+. . x G x x x . . x 
+----------------------------------------
+SHORTEST PATH DFS: 
+@ @ @ x @ @ x x x x 
+@ @ @ @ @ @ @ . x x 
+@ @ @ @ @ @ S . x x 
+x @ @ @ @ @ @ @ @ @ 
+x @ @ @ @ @ @ @ @ @ 
+x @ x @ @ @ @ @ @ @ 
+@ @ x @ x @ @ @ @ @ 
+@ x x @ @ @ x x @ @ 
+@ @ @ @ x @ @ @ @ x 
+@ @ x G x x x @ @ x 
+----------------------------------------
+SHORTEST PATH BFS: 
+. @ @ x . @ x x x x 
+@ @ @ @ @ @ @ . x x 
+@ @ @ @ @ @ S @ x x 
+x @ @ @ @ @ @ @ @ @ 
+x @ @ @ @ @ @ @ @ @ 
+x @ x @ @ @ @ @ @ @ 
+@ @ x @ x @ @ @ @ @ 
+@ x x @ @ @ x x @ . 
+@ @ @ @ x @ @ @ @ x 
+. @ x G x x x . @ x 
+----------------------------------------
+SHORTEST PATH A*: 
+. . . x . . x x x x 
+. . . . . . . . x x 
+. . . . . . S . x x 
+x . . . . . @ . . . 
+x . . . . . @ . . . 
+x . x . . . @ . . . 
+. . x . x @ @ . . . 
+. x x @ @ @ x x . . 
+. . . @ x @ @ @ . x 
+. . x G x x x . . x 
+----------------------------------------
+SHORTEST PATH: 
+. . . x . . x x x x 
+. . . . . . . . x x 
+. . . . . . S . x x 
+x . . . . . @ . . . 
+x . . . . . @ . . . 
+x . x . . . @ . . . 
+. . x . x @ @ . . . 
+. x x @ @ @ x x . . 
+. . . @ x . . . . x 
+. . x G x x x . . x 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x x x x 
+x x x x x x x x x x 
+. . . . x x x x x G 
+. . . . . x x . . . 
+. . . x . . x . . . 
+. . . . . . . . . . 
+. . . S . . . x . . 
+. . . . . . . x . . 
+. . . . . . . . . x 
+. . . . . . . . . x 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+@ @ @ @ x x x x x G 
+@ @ @ @ @ x x @ @ @ 
+@ @ @ x @ @ x @ @ @ 
+@ @ @ @ @ @ @ @ @ @ 
+@ @ @ S @ @ @ x @ @ 
+@ @ @ @ @ @ @ x @ @ 
+@ @ @ @ @ @ @ @ @ x 
+@ @ @ @ @ @ @ @ @ x 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+. @ @ . x x x x x G 
+@ @ @ @ @ x x @ @ @ 
+@ @ @ x @ . x @ @ @ 
+@ @ @ @ @ @ @ @ @ @ 
+@ @ @ S @ @ @ x @ @ 
+@ @ @ @ @ @ @ x @ . 
+@ @ @ @ @ @ @ @ @ x 
+. @ @ @ @ @ @ @ . x 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+. . . . x x x x x G 
+. . . . . x x @ @ @ 
+. . . x . . x @ @ . 
+. . . . . @ @ @ . . 
+. . . S @ @ @ x . . 
+. . . . . . . x . . 
+. . . . . . . . . x 
+. . . . . . . . . x 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+. . . . x x x x x G 
+. . . . . x x @ @ @ 
+. . . x . . x @ . . 
+. . . @ @ @ @ @ . . 
+. . . S . . . x . . 
+. . . . . . . x . . 
+. . . . . . . . . x 
+. . . . . . . . . x 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+. . S x x x x x x x 
+. . . x x x x x x x 
+G x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+@ @ S x x x x x x x 
+@ @ @ x x x x x x x 
+G x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+@ @ S x x x x x x x 
+@ @ @ x x x x x x x 
+G x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+. @ S x x x x x x x 
+@ @ @ x x x x x x x 
+G x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+. . S x x x x x x x 
+@ @ @ x x x x x x x 
+G x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x . . . . x x x 
+S . x . . x . x x x 
+. . x . . x . G x x 
+. . x . . x x x x x 
+x . . . . . x x x x 
+x . . . . . x x x x 
+x x x x . . x x x x 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x . @ @ @ x x x 
+S @ x . @ x @ x x x 
+@ @ x @ @ x @ G x x 
+@ @ x @ @ x x x x x 
+x @ @ @ @ @ x x x x 
+x . @ @ @ @ x x x x 
+x x x x @ @ x x x x 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x @ @ @ @ x x x 
+S @ x @ @ x @ x x x 
+@ @ x @ @ x @ G x x 
+@ @ x @ @ x x x x x 
+x @ @ @ @ @ x x x x 
+x @ @ @ @ @ x x x x 
+x x x x @ . x x x x 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x . . . . x x x 
+S @ x . . x . x x x 
+. @ x . . x . G x x 
+. @ x . . x x x x x 
+x @ @ @ @ @ x x x x 
+x @ @ @ @ @ x x x x 
+x x x x @ @ x x x x 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x @ @ @ @ x x x 
+S . x @ . x @ x x x 
+@ . x @ . x @ G x x 
+@ @ x @ . x x x x x 
+x @ @ @ . . x x x x 
+x . . . . . x x x x 
+x x x x . . x x x x 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x S x x G x x 
+x x x x . . . . x x 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x S x x G x x 
+x x x x @ @ @ @ x x 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x S x x G x x 
+x x x x @ @ @ @ x x 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x S x x G x x 
+x x x x @ @ @ @ x x 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x x x x x x x 
+x x x x S x x G x x 
+x x x x @ @ @ @ x x 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x x x x x 
+. G x x x x x . . S 
+. . . x x x . . x x 
+. . . x x x . x x x 
+. . . x x x . x x x 
+. . . x x . . . . . 
+. . . x x . . . . . 
+. . . x . . . . . . 
+. . . x . x x . x . 
+. . . . . x x . . . 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x x x x x 
+@ G x x x x x @ @ S 
+@ @ @ x x x @ @ x x 
+@ @ @ x x x @ x x x 
+@ @ @ x x x @ x x x 
+@ @ @ x x @ @ @ @ @ 
+. . @ x x @ @ @ @ @ 
+. . @ x @ @ @ @ . . 
+. . @ x @ x x . x . 
+. . @ @ @ x x . . . 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x x x x x 
+. G x x x x x @ @ S 
+@ @ @ x x x @ @ x x 
+@ @ @ x x x @ x x x 
+@ @ @ x x x @ x x x 
+@ @ @ x x @ @ @ @ @ 
+@ @ @ x x @ @ @ @ @ 
+@ @ @ x @ @ @ @ @ @ 
+@ @ @ x @ x x @ x @ 
+@ @ @ @ @ x x @ @ . 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x x x x x 
+. G x x x x x @ @ S 
+. @ @ x x x @ @ x x 
+. . @ x x x @ x x x 
+. . @ x x x @ x x x 
+. . @ x x @ @ @ @ @ 
+. . @ x x @ @ @ @ @ 
+. . @ x @ @ @ @ @ @ 
+. . @ x @ x x @ x @ 
+. . @ @ @ x x @ @ @ 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x x x x x 
+. G x x x x x @ @ S 
+. @ @ x x x @ @ x x 
+. . @ x x x @ x x x 
+. . @ x x x @ x x x 
+. . @ x x . @ . . . 
+. . @ x x . @ . . . 
+. . @ x @ @ @ . . . 
+. . @ x @ x x . x . 
+. . @ @ @ x x . . . 
+----------------------------------------
+GENERATED MAZE:
+. . . . . . . S . . 
+. . . . . . . . . . 
+. . . . x . . . . . 
+. . . . x . . . . . 
+. . . . G x . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+----------------------------------------
+SHORTEST PATH DFS: 
+. . . @ @ @ @ S @ @ 
+. . . @ @ @ . @ @ @ 
+. . . @ x . . . @ @ 
+. . @ @ x . . . . . 
+. . @ @ G x . . . . 
+. . @ @ @ . . . . . 
+@ @ @ . @ . . . . . 
+@ @ . @ @ . . . . . 
+@ @ . @ @ @ @ @ . . 
+@ @ @ @ @ @ @ @ . . 
+----------------------------------------
+SHORTEST PATH BFS: 
+@ @ @ @ @ @ @ S @ @ 
+@ @ @ @ @ @ @ @ @ @ 
+@ @ @ @ x @ @ @ @ @ 
+@ @ @ @ x . @ @ @ @ 
+@ @ @ @ G x @ @ @ @ 
+@ @ @ @ @ @ @ @ @ @ 
+@ @ @ @ @ @ @ @ @ @ 
+@ @ @ @ @ @ @ @ @ @ 
+@ @ @ @ @ @ @ @ @ @ 
+. @ @ @ @ @ @ @ @ . 
+----------------------------------------
+SHORTEST PATH A*: 
+. . . . . . . S . . 
+. . . . . . @ @ . . 
+. . . . x @ @ @ . . 
+. . . . x @ @ . . . 
+. . . . G x . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+----------------------------------------
+SHORTEST PATH: 
+. . . . . . . S . . 
+. . . @ @ @ @ @ . . 
+. . . @ x . . . . . 
+. . . @ x . . . . . 
+. . . @ G x . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+----------------------------------------
+GENERATED MAZE:
+x x x x x x . . . . 
+x x x x x x . . . . 
+x x x . . . . . . . 
+x x x . . . x . . . 
+x x x . . . . x . . 
+x x x x x . . x x . 
+x x . . . . x x G . 
+. . . . . S x x . . 
+. . . . . x x x x x 
+. . . . . x x x x x 
+----------------------------------------
+SHORTEST PATH DFS: 
+x x x x x x @ @ @ @ 
+x x x x x x @ @ @ @ 
+x x x . @ @ @ @ @ @ 
+x x x @ @ . x @ @ @ 
+x x x @ @ @ @ x @ @ 
+x x x x x @ @ x x @ 
+x x . @ @ @ x x G @ 
+. . . @ @ S x x . . 
+. . . @ @ x x x x x 
+. . . @ @ x x x x x 
+----------------------------------------
+SHORTEST PATH BFS: 
+x x x x x x @ @ @ . 
+x x x x x x @ @ @ @ 
+x x x . @ @ @ @ @ @ 
+x x x @ @ @ x @ @ @ 
+x x x @ @ @ . x @ @ 
+x x x x x @ @ x x @ 
+x x . @ @ @ x x G @ 
+@ @ @ @ @ S x x . . 
+@ @ @ @ @ x x x x x 
+. @ @ @ @ x x x x x 
+----------------------------------------
+SHORTEST PATH A*: 
+x x x x x x . . . . 
+x x x x x x . . . . 
+x x x @ @ @ @ @ . . 
+x x x @ @ @ x @ @ . 
+x x x @ @ @ @ x @ @ 
+x x x x x @ @ x x @ 
+x x . . . @ x x G @ 
+. . . . . S x x . . 
+. . . . . x x x x x 
+. . . . . x x x x x 
+----------------------------------------
+SHORTEST PATH: 
+x x x x x x . . . . 
+x x x x x x . . . . 
+x x x . . @ @ @ . . 
+x x x . . @ x @ @ . 
+x x x . . @ . x @ @ 
+x x x x x @ . x x @ 
+x x . . . @ x x G @ 
+. . . . . S x x . . 
+. . . . . x x x x x 
+. . . . . x x x x x 
+----------------------------------------
+GENERATED MAZE:
+. . . . . . . . . . 
+. x x . . . . . . . 
+. G . . . S . . . . 
+. x . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+----------------------------------------
+SHORTEST PATH DFS: 
+@ @ @ @ . . . @ @ . 
+@ x x @ @ @ . @ @ . 
+@ G @ @ @ S @ @ @ . 
+@ x . @ @ @ @ @ @ @ 
+@ @ @ @ @ @ @ @ . @ 
+@ @ @ . . @ @ @ @ @ 
+. . @ @ @ . . @ @ . 
+. . . . @ @ @ @ @ . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+----------------------------------------
+SHORTEST PATH BFS: 
+. . . . @ @ @ . . . 
+. x x @ @ @ @ @ . . 
+. G @ @ @ S @ @ @ . 
+. x . @ @ @ @ @ . . 
+. . . . @ @ @ . . . 
+. . . . . @ . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+----------------------------------------
+SHORTEST PATH A*: 
+. . . . . . . . . . 
+. x x . . . . . . . 
+. G @ @ @ S . . . . 
+. x . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+----------------------------------------
+SHORTEST PATH: 
+. . . . . . . . . . 
+. x x . . . . . . . 
+. G @ @ @ S . . . . 
+. x . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
+. . . . . . . . . . 
