@@ -150,7 +150,7 @@ def BFS(maze, s):
 
             if(BFSmaze[current[0]][current[1]] == 'G'):
                 return BFSmaze
-
+                   
         if(queue1):
             queue1.pop(0)
 
@@ -238,8 +238,10 @@ def AuxDjikstras(maze, weights, end):
 def Heuristic(x1, x2, y1, y2):
     return  math.sqrt( (x1 - x2)**2 + ((y1 - y2)**2))
 
+
+
 def Heuristic2(x1, x2, y1, y2):
-    return  abs(x1 - x2) + abs(y1 - y2)
+    return abs(x1 - x2) + abs(y1 - y2)
 
 def Astar(maze, s, g):
     fn = 0
@@ -251,9 +253,9 @@ def Astar(maze, s, g):
 
     queue1.append((Heuristic(s[0], g[0], s[1], g[1]), s))
 
-    h.heapify(queue1)
 
     while(queue1):
+        h.heapify(queue1)
         point = queue1[0][1]
         x = point[1]
         y = point[0]
@@ -267,16 +269,10 @@ def Astar(maze, s, g):
             choice = []
             for f in listpoints:
                 hlist.append(Heuristic(f[0], g[0], f[1], g[1]))
-            
-            #print(hlist)
-            #print(listpoints)
-            minval = min(hlist)
 
             for i in range(len(listpoints)):
-                if(hlist[i] == minval):
-                    choice.append((minval, listpoints[i]))
+                choice.append((hlist[i], listpoints[i]))
             
-            print(choice)
             for c in choice:
                 if(not(c[1] in queue1)):
                    queue1.append(c)
@@ -298,12 +294,12 @@ def printMaze(x, f):
         f.write('\n')
 
 def main():
-    dmaze = [['S','.','.','.','.','.','.','.','.','.'],
+    dmaze = [['.','.','.','.','.','.','.','.','.','.'],
              ['.','x','x','.','x','x','x','x','x','.'],
-             ['.','x','x','.','x','x','x','x','x','.'],
-             ['.','.','.','.','.','.','.','.','.','x'],
+             ['.','x','x','S','x','x','x','x','x','.'],
+             ['.','.','.','.','.','.','x','.','.','.'],
              ['x','x','x','x','x','.','x','x','x','.'],
-             ['x','x','x','x','x','.','.','.','x','.'],
+             ['x','x','x','x','x','.','x','.','x','.'],
              ['x','x','x','x','x','x','x','.','x','.'],
              ['x','x','x','x','x','x','x','.','x','.'],
              ['x','x','x','x','x','x','x','.','x','.'],
