@@ -301,7 +301,7 @@ def main():
     x = 10
     for i in range(20):
         
-        n = createMaze(50,50)
+        n = createMaze(10,10)
 
         maze = n[0].copy()
 
@@ -320,15 +320,15 @@ def main():
         printMaze(maze, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH DFS: ")
-        outputFile.write("----------------------------------------\nSHORTEST PATH DFS: \n")
+        outputFile.write("----------------------------------------\nVISITED NODES DFS: \n")
         printMaze(q, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH BFS: ")
-        outputFile.write("----------------------------------------\nSHORTEST PATH BFS: \n")
+        outputFile.write("----------------------------------------\nVISITED NODES BFS: \n")
         printMaze(y, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH A*: ")
-        outputFile.write("----------------------------------------\nSHORTEST PATH A*: \n")
+        outputFile.write("----------------------------------------\nVISITED NODES A*: \n")
         printMaze(r, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH: ")
