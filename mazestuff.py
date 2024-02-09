@@ -1,6 +1,7 @@
 import random
 import copy
 import heapq as h
+import math
 import time
 
 
@@ -117,6 +118,7 @@ def DFS(maze, s):
     return DFSmaze
 
 def BFS(maze, s):
+
     l = len(maze)
     w = len(maze[0])
 
@@ -124,6 +126,8 @@ def BFS(maze, s):
     visited = [[0 for _ in range(w)] for _ in range(l)]
     queue1 = []
     queue1.append(s)
+
+
 
     while(queue1):
         visited[queue1[0][0]][queue1[0][1]] = 1
@@ -146,7 +150,6 @@ def BFS(maze, s):
 
             if(BFSmaze[current[0]][current[1]] == 'G'):
                 return BFSmaze
-
 
         if(queue1):
             queue1.pop(0)
@@ -233,16 +236,19 @@ def AuxDjikstras(maze, weights, end):
     return BFSmaze
 
 def Heuristic(x1, x2, y1, y2):
-    return  abs( x1 - x2 ) + abs(y1 - y2)
+    return  math.sqrt( (x1 - x2)**2 + ((y1 - y2)**2))
 
 def Astar(maze, s, g):
+    fn = 0
     l = len(maze)
     w = len(maze[0])
     Astarmaze = copy.deepcopy(maze)
     visited = [[0 for _ in range(w)] for _ in range(l)]
     queue1 = []
+
     queue1.append((Heuristic(s[0], g[0], s[1], g[1]), s))
-    h.heapify(queue1)
+
+    #h.heapify(queue1)
 
     while(queue1):
         point = queue1[0][1]
@@ -252,7 +258,7 @@ def Astar(maze, s, g):
         visited[y][x] = 1
 
         listpoints = checkBounds(x, y, w, l, visited, Astarmaze, listpoints)
-
+    
         if(listpoints):
             hlist = []
             choice = []
@@ -263,19 +269,19 @@ def Astar(maze, s, g):
             choice.append((minval, listpoints[hlist.index(minval)]))
 
             for d in hlist:
-                if not(hlist.index(d) == listpoints.index(choice[0][1]) and hlist[0] == d):
+                if(d == minval and not(choice[0][1] == listpoints[hlist.index(d)])):
                     choice.append((d, listpoints[hlist.index(d)]))
-                
+
             for c in choice:
-                if(not(c in queue1) and c[0] <= queue1[0][0]):
+                if(not(c in queue1)):
                    queue1.append(c)
                 if(Astarmaze[c[1][0]][c[1][1]] == 'G'):
                     return Astarmaze.copy()
                 elif(not(Astarmaze[c[1][0]][c[1][1]] == 'S' or Astarmaze[c[1][0]][c[1][1]] == 'G')):
                     Astarmaze[c[1][0]][c[1][1]] = '@' 
-            if(queue1):
-                queue1.pop(0)
-    
+        if(queue1):
+            queue1.pop(0)
+
     return Astarmaze.copy()
 
 def printMaze(x, f): 
@@ -287,20 +293,39 @@ def printMaze(x, f):
         f.write('\n')
 
 def main():
+    dmaze = [['S','.','.','.','.','.','.','.','.','.'],
+             ['.','x','x','.','x','x','x','x','x','.'],
+             ['.','x','x','.','x','x','x','x','x','.'],
+             ['.','.','.','.','.','.','.','.','.','.'],
+             ['x','x','x','x','x','.','x','x','x','.'],
+             ['x','x','x','x','x','.','.','.','x','.'],
+             ['x','x','x','x','x','x','x','.','x','.'],
+             ['x','x','x','x','x','x','x','.','x','.'],
+             ['x','x','x','x','x','x','x','.','x','.'],
+             ['x','x','x','x','x','x','x','.','.','G']
+    ]
+
     outputFile = open('output.txt', 'w')
 
     x = 10
     for i in range(20):
         
         n = createMaze(10,10)
+
         maze = n[0].copy()
+
         q = DFS(copy.deepcopy(maze), n[1])
-        r = Astar(copy.deepcopy(maze), n[1], n[2])
+
         y = BFS(copy.deepcopy(maze), n[1])
+
+        r = Astar(copy.deepcopy(maze), n[1], n[2])
+        
         z = Djikstras(copy.deepcopy(maze), n[1], n[2])
+
 
         print("----------------------------------------")
         print("GENERATED MAZE: ")
+    
         outputFile.write("----------------------------------------\nGENERATED MAZE:\n")
         printMaze(maze, outputFile)
         print("----------------------------------------")
@@ -313,11 +338,11 @@ def main():
         printMaze(y, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH A*: ")
-        #outputFile.write("----------------------------------------\nSHORTEST PATH A*: \n")
-        #printMaze(r, outputFile)
+        outputFile.write("----------------------------------------\nSHORTEST PATH A*: \n")
+        printMaze(r, outputFile)
         print("----------------------------------------")
         print("SHORTEST PATH: ")
-        outputFile.write("----------------------------------------\nSHORTEST PATH Djikstras: \n")
+        outputFile.write("----------------------------------------\nSHORTEST PATH: \n")
         printMaze(z, outputFile)
         print("----------------------------------------")
         print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")

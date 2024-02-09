@@ -5,11 +5,11 @@ window = Tk()
 window.title("Maze Display")
 window.geometry("1750x500")
 
-numGraphs = 4 #number of displayed graphs
+numGraphs = 5 #number of displayed graphs
 run = 0 #the number of the run that we are currently on; run goes from 0 to 9
 numDFS = 1 #the number of DFS Graphs per run
 numBFS = 1 #the number of BFS Graphs per run
-numAStar = 0 #the number of AStar Graphs per run
+numAStar = 1 #the number of AStar Graphs per run
 
 
 def open_txt(): #writes to each textbox
