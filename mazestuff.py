@@ -256,6 +256,7 @@ def Astar(maze, s, g):
 
     while(queue1):
         h.heapify(queue1)
+        print(queue1)
         point = queue1[0][1]
         x = point[1]
         y = point[0]
@@ -269,12 +270,12 @@ def Astar(maze, s, g):
             choice = []
             for f in listpoints:
                 hlist.append(Heuristic(f[0], g[0], f[1], g[1]))
-
+                
             for i in range(len(listpoints)):
                 choice.append((hlist[i], listpoints[i]))
             
             for c in choice:
-                if(not(c[1] in queue1)):
+                if(not(c in queue1)):
                    queue1.append(c)
                 if(Astarmaze[c[1][0]][c[1][1]] == 'G'):
                     return Astarmaze.copy()
@@ -294,24 +295,13 @@ def printMaze(x, f):
         f.write('\n')
 
 def main():
-    dmaze = [['.','.','.','.','.','.','.','.','.','.'],
-             ['.','x','x','.','x','x','x','x','x','.'],
-             ['.','x','x','S','x','x','x','x','x','.'],
-             ['.','.','.','.','.','.','x','.','.','.'],
-             ['x','x','x','x','x','.','x','x','x','.'],
-             ['x','x','x','x','x','.','x','.','x','.'],
-             ['x','x','x','x','x','x','x','.','x','.'],
-             ['x','x','x','x','x','x','x','.','x','.'],
-             ['x','x','x','x','x','x','x','.','x','.'],
-             ['x','x','x','x','x','x','x','.','.','G']
-    ]
 
     outputFile = open('output.txt', 'w')
 
     x = 10
     for i in range(20):
         
-        n = createMaze(10,10)
+        n = createMaze(50,50)
 
         maze = n[0].copy()
 
