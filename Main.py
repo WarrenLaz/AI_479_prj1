@@ -12,6 +12,8 @@ def countvisited(maze):
         for y in x:
             if y == '@':
                 counter+=1
+            elif y == '#':
+                counter +=1
     return counter
 
 def printMaze(x): 
@@ -33,8 +35,8 @@ def main():
     outputFile = open('output.txt', 'w')
     x = 10
 
-    nummaze = int(input("Enter number of Mazes: "))
-    l = int(input("Enter Maze Length: "))
+    nummaze = int(input("Enter number of Mazes (For Sake of UI, We reccommended Entering 10): "))
+    l = int(input("Enter Maze Length (For Sake of UI, We reccommended Entering 10): "))
     w = int(input("Enter Maze Width: "))
     d = float(input("Enter Maze density from Range[0.0-1.0]: "))
     for i in range(nummaze):
@@ -62,28 +64,42 @@ def main():
         print("GENERATED MAZE: ")
         outputFile.write("----------------------------------------\nGENERATED MAZE:\n")
         printMaze(maze, outputFile)
+        outputFile.write("\n")
+        outputFile.write("\n")
         print("----------------------------------------")
         print("SHORTEST PATH DFS: ")
         outputFile.write("----------------------------------------\nVISITED NODES DFS: \n")
         printMaze(q, outputFile)
         print("NUMBER OF NODES VISITED: ", countvisited(q))
         print("TIME: ", DFStime)
+        outputFile.write("NUMBER OF NODES VISITED: " + str(countvisited(q)))
+        outputFile.write("\nTIME: " + str(DFStime))
+        outputFile.write("\n")
         print("----------------------------------------")
         print("SHORTEST PATH BFS: ")
         outputFile.write("----------------------------------------\nVISITED NODES BFS: \n")
         printMaze(y, outputFile)
         print("NUMBER OF NODES VISITED: ", countvisited(y))
         print("TIME: ", BFStime)
+        outputFile.write("NUMBER OF NODES VISITED: " + str(countvisited(y)))
+        outputFile.write("\nTIME: " + str(BFStime))
+        outputFile.write("\n")
         print("----------------------------------------")
         print("SHORTEST PATH A*: ")
         outputFile.write("----------------------------------------\nVISITED NODES A*: \n")
         printMaze(r, outputFile)
         print("NUMBER OF NODES VISITED: ", countvisited(r))
         print("TIME: ", Astartime)
+        outputFile.write("NUMBER OF NODES VISITED: " + str(countvisited(r)))
+        outputFile.write("\nTIME: " + str(Astartime))
+        outputFile.write("\n")
         print("----------------------------------------")
         print("SHORTEST PATH: ")
         outputFile.write("----------------------------------------\nSHORTEST PATH: \n")
         printMaze(z, outputFile)
+        outputFile.write("NUMBER OF NODES VISITED: " + str(countvisited(z)))
+        outputFile.write("\n")
+        outputFile.write("\n")
         print("----------------------------------------")
         print("\nxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n")
         x = x + 1

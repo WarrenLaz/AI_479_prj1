@@ -11,7 +11,7 @@ numDFS = 1 #the number of DFS Graphs per run
 numBFS = 1 #the number of BFS Graphs per run
 numAStar = 1 #the number of AStar Graphs per run
 
-rowsPerGraph = 10 + 2 #the number of lines in each graph + 2 for the lines and name of graph
+rowsPerGraph = 10 + 2 + 2 #the number of lines in each graph + 2 for the lines and name of graph
 
 def open_txt(): #writes to each textbox
     delete()
@@ -31,8 +31,6 @@ def open_txt(): #writes to each textbox
             AStarGraph.insert(END, mazeFile[x])
         elif x - run * numLines <= rowsPerGraph - 1 + rowsPerGraph * numDFS + rowsPerGraph * numBFS + rowsPerGraph * numAStar + rowsPerGraph:
             DijkstraGraph.insert(END, mazeFile[x])
-    
-    #DFSGraph.insert(END, "Number of Nodes Expanded:")
     
     runNumText.insert(END, 'Maze Run #' + str(run + 1))
 
