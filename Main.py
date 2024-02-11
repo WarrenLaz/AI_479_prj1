@@ -35,8 +35,8 @@ def main():
     outputFile = open('output.txt', 'w')
     x = 10
 
-    nummaze = int(input("Enter number of Mazes (For Sake of UI, We reccommended Entering 10): "))
-    l = int(input("Enter Maze Length (For Sake of UI, We reccommended Entering 10): "))
+    nummaze = int(input("Enter number of Mazes: "))
+    l = int(input("Enter Maze Length: "))
     w = int(input("Enter Maze Width: "))
     d = float(input("Enter Maze density from Range[0.0-1.0]: "))
     for i in range(nummaze):
