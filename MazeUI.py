@@ -1,5 +1,6 @@
 import tkinter
 from tkinter import *
+import Main
 
 window = Tk()
 window.title("Maze Display")
@@ -13,6 +14,7 @@ numAStar = 1 #the number of AStar Graphs per run
 
 rowsPerGraph = 10 + 2 #the number of lines in each graph + 2 for the lines and name of graph
 
+Main.main()
 
 def open_txt(): #writes to each textbox
     delete()

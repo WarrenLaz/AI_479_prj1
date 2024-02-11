@@ -1,1200 +1,600 @@
 ----------------------------------------
 GENERATED MAZE:
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x x x . x x x . 
-. . . . x . . . x . 
-. . . . x x . . . . 
-. . . . . . G x . . 
-. . . . . . . . . . 
-. . . x x S . . . . 
-. . . . . . . . . . 
+x . . . . x . x x . 
+x . . x . x . . . x 
+x . x . x x x x x . 
+x x x x . x x . x . 
+x . . x . . x x . . 
+. x x . x . . x x x 
+x . S . x . . x . . 
+. x . x x x x . x x 
+. . . x . x x x . . 
+G . . . . . x x x x 
 ----------------------------------------
 VISITED NODES DFS: 
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x x x . x x x . 
-. . . . x . . . x . 
-. . . . x x . . . . 
-. . . . . @ G x . . 
-. . @ @ @ @ . . . . 
-. . @ x x S . . . . 
-. . @ @ @ @ . . . . 
+x . . . . x . x x . 
+x . . x . x . . . x 
+x . x . x x x x x . 
+x x x x . x x . x . 
+x . . x . . x x . . 
+. x x . x . . x x x 
+x @ S @ x . . x . . 
+. x @ x x x x . x x 
+. . @ x @ x x x . . 
+G @ @ @ @ @ x x x x 
 ----------------------------------------
 VISITED NODES BFS: 
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x x x . x x x . 
-. . . . x . . . x . 
-. . . . x x . . . . 
-. . . . . @ G x . . 
-. . . . @ @ @ @ . . 
-. . . x x S @ @ @ . 
-. . . . @ @ @ @ . . 
+x . . . . x . x x . 
+x . . x . x . . . x 
+x . x . x x x x x . 
+x x x x . x x . x . 
+x . . x . . x x . . 
+. x x . x . . x x x 
+x . S @ x . . x . . 
+. x @ x x x x . x x 
+@ @ @ x . x x x . . 
+G @ @ @ @ . x x x x 
 ----------------------------------------
 VISITED NODES A*: 
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x x x . x x x . 
-. . . . x . . . x . 
-. . . . x x . . . . 
-. . . . @ @ G x . . 
-. . . . @ @ @ . . . 
-. . . x x S @ . . . 
-. . . . . @ . . . . 
+x . . . . x . x x . 
+x . . x . x . . . x 
+x . x . x x x x x . 
+x x x x . x x . x . 
+x . . x . . x x . . 
+. x x . x . . x x x 
+x @ S @ x . . x . . 
+@ x @ x x x x . x x 
+@ @ @ x . x x x . . 
+G @ @ . . . x x x x 
 ----------------------------------------
 SHORTEST PATH: 
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x . . . . . . . 
-x x x x x . x x x . 
-. . . . x . . . x . 
-. . . . x x . . . . 
-. . . . . @ G x . . 
-. . . . . @ . . . . 
-. . . x x S . . . . 
-. . . . . . . . . . 
+x . . . . x . x x . 
+x . . x . x . . . x 
+x . x . x x x x x . 
+x x x x . x x . x . 
+x . . x . . x x . . 
+. x x . x . . x x x 
+x . S . x . . x . . 
+. x # x x x x . x x 
+. . # x . x x x . . 
+G # # . . . x x x x 
 ----------------------------------------
 GENERATED MAZE:
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-. . x G x x x x x x 
-. . . . x x x . . x 
-. . . . . . . . . x 
-. . . . S . . . . x 
-. x . . . . . x x x 
-. . . x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-@ @ x G x x x x x x 
-@ @ @ @ x x x . . x 
-@ @ @ @ @ @ . . . x 
-@ @ @ @ S @ . . . x 
-@ x @ @ . . . x x x 
-@ @ @ x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-. @ x G x x x x x x 
-@ @ @ @ x x x @ . x 
-@ @ @ @ @ @ @ @ @ x 
-@ @ @ @ S @ @ @ @ x 
-@ x @ @ @ @ . x x x 
-. @ @ x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-. . x G x x x x x x 
-. . @ @ x x x . . x 
-. . @ @ @ @ . . . x 
-. . . @ S @ . . . x 
-. x . . @ . . x x x 
-. . . x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-. . x G x x x x x x 
-. . . @ x x x . . x 
-. . . @ @ . . . . x 
-. . . . S . . . . x 
-. x . . . . . x x x 
-. . . x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-GENERATED MAZE:
-x x x x x . . . . . 
-x x x x x . . . . . 
-x x . . . . . . . . 
-x x . . x x . . . . 
-x x x . x x . . . x 
-x x x . x x . . x x 
-x G x . . x . . x x 
-x . . . . x . x x x 
-x . . . . . . x x x 
-x . . . S x x x x x 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x . @ @ @ @ 
-x x x x x . @ . . @ 
-x x @ @ @ @ @ . @ @ 
-x x @ @ x x . . @ . 
-x x x @ x x . @ @ x 
-x x x @ x x . @ x x 
-x G x @ @ x @ @ x x 
-x @ @ @ @ x @ x x x 
-x @ @ @ @ @ @ x x x 
-x @ @ @ S x x x x x 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x . @ @ @ . 
-x x x x x @ @ @ @ @ 
-x x . @ @ @ @ @ @ @ 
-x x @ @ x x @ @ @ @ 
-x x x @ x x @ @ @ x 
-x x x @ x x @ @ x x 
-x G x @ @ x @ @ x x 
-x @ @ @ @ x @ x x x 
-x @ @ @ @ @ @ x x x 
-x @ @ @ S x x x x x 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x . . . . . 
-x x x x x . . . . . 
-x x . . . . . . . . 
-x x . . x x . . . . 
-x x x . x x . . . x 
-x x x . x x . . x x 
-x G x @ . x . . x x 
-x @ @ @ @ x . x x x 
-x . @ @ @ @ . x x x 
-x . . @ S x x x x x 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x . . . . . 
-x x x x x . . . . . 
-x x . . . . . . . . 
-x x . . x x . . . . 
-x x x . x x . . . x 
-x x x . x x . . x x 
-x G x . . x . . x x 
-x @ @ @ @ x . x x x 
-x . . . @ . . x x x 
-x . . . S x x x x x 
-----------------------------------------
-GENERATED MAZE:
-S . x . . . . . . . 
-. . . . . . . . . G 
-. . . . . . . x . . 
-. . . . . . . x . . 
-. . x . . . . x . . 
-. x x x x x x x x . 
-. x x x x x x x x . 
-. x x x x x x x . . 
-. . . . x x x . . x 
-x x x . . . . . x x 
-----------------------------------------
-VISITED NODES DFS: 
-S @ x @ @ @ @ @ @ @ 
-@ @ @ @ @ @ @ @ . G 
-. . @ @ @ @ @ x . . 
-. . @ @ @ @ @ x . . 
-. . x @ @ @ @ x . . 
-. x x x x x x x x . 
-. x x x x x x x x . 
-. x x x x x x x . . 
-. . . . x x x . . x 
-x x x . . . . . x x 
-----------------------------------------
-VISITED NODES BFS: 
-S @ x @ @ @ @ @ . . 
-@ @ @ @ @ @ @ @ @ G 
-@ @ @ @ @ @ @ x . . 
-@ @ @ @ @ @ @ x . . 
-@ . x @ @ @ . x . . 
-@ x x x x x x x x . 
-@ x x x x x x x x . 
-@ x x x x x x x . . 
-@ @ . . x x x . . x 
-x x x . . . . . x x 
-----------------------------------------
-VISITED NODES A*: 
-S @ x @ @ @ @ @ . . 
-@ @ @ @ @ @ @ @ @ G 
-. @ @ @ @ @ @ x . . 
-. . . . . . . x . . 
-. . x . . . . x . . 
-. x x x x x x x x . 
-. x x x x x x x x . 
-. x x x x x x x . . 
-. . . . x x x . . x 
-x x x . . . . . x x 
-----------------------------------------
-SHORTEST PATH: 
-S . x . . . . . . . 
-@ @ @ @ @ @ @ @ @ G 
-. . . . . . . x . . 
-. . . . . . . x . . 
-. . x . . . . x . . 
-. x x x x x x x x . 
-. x x x x x x x x . 
-. x x x x x x x . . 
-. . . . x x x . . x 
-x x x . . . . . x x 
-----------------------------------------
-GENERATED MAZE:
-x x x x x x x x x x 
-. S x x x x x x x x 
-. . x x x x x x x x 
-. . x x x x x x x x 
-. . x . . . x x x G 
-. . . . . . . x x . 
-. . . . . . . . x . 
-. . . . . . . . x . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-@ S x x x x x x x x 
-@ @ x x x x x x x x 
-@ @ x x x x x x x x 
-@ @ x . . . x x x G 
-. @ . . . . . x x @ 
-. @ @ @ . . . . x @ 
-. @ @ @ . . @ @ x @ 
-. @ . @ @ @ @ @ @ @ 
-. @ @ @ . . . @ @ @ 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-@ S x x x x x x x x 
-@ @ x x x x x x x x 
-@ @ x x x x x x x x 
-@ @ x @ @ . x x x G 
-@ @ @ @ @ @ @ x x @ 
-@ @ @ @ @ @ @ @ x @ 
-@ @ @ @ @ @ @ @ x @ 
-@ @ @ @ @ @ @ @ @ @ 
-. @ @ @ @ @ @ @ @ . 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-@ S x x x x x x x x 
-@ @ x x x x x x x x 
-@ @ x x x x x x x x 
-@ @ x @ @ @ x x x G 
-@ @ @ @ @ @ @ x x @ 
-. @ @ @ @ @ @ @ x @ 
-. . . . . @ @ @ x @ 
-. . . . . . @ @ @ @ 
-. . . . . . . @ @ @ 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-. S x x x x x x x x 
-. @ x x x x x x x x 
-. @ x x x x x x x x 
-. @ x . . . x x x G 
-. @ . . . . . x x @ 
-. @ . . . . . . x @ 
-. @ . . . . . . x @ 
-. @ @ @ @ @ @ @ @ @ 
-. . . . . . . . . . 
-----------------------------------------
-GENERATED MAZE:
-x x S . . . x x x x 
-x x x . . . . x x x 
-x x x . . . . x x x 
-. . . . . . . x x x 
-. . . x x x x x x x 
-. x x x x x x x x x 
-. . . x x x x x x x 
-x x . x x x x x x x 
-x x . . x x x x x x 
-x x x . . G x x x x 
-----------------------------------------
-VISITED NODES DFS: 
-x x S @ . . x x x x 
-x x x @ . . . x x x 
-x x x @ . . . x x x 
-@ @ @ @ . . . x x x 
-@ @ @ x x x x x x x 
-@ x x x x x x x x x 
-@ @ @ x x x x x x x 
-x x @ x x x x x x x 
-x x @ @ x x x x x x 
-x x x @ @ G x x x x 
-----------------------------------------
-VISITED NODES BFS: 
-x x S @ @ @ x x x x 
-x x x @ @ @ @ x x x 
-x x x @ @ @ @ x x x 
-@ @ @ @ @ @ . x x x 
-@ @ @ x x x x x x x 
-@ x x x x x x x x x 
-@ @ @ x x x x x x x 
-x x @ x x x x x x x 
-x x @ @ x x x x x x 
-x x x @ @ G x x x x 
-----------------------------------------
-VISITED NODES A*: 
-x x S @ @ . x x x x 
-x x x @ @ @ @ x x x 
-x x x @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ x x x x x x x 
-@ x x x x x x x x x 
-@ @ @ x x x x x x x 
-x x @ x x x x x x x 
-x x @ @ x x x x x x 
-x x x @ @ G x x x x 
-----------------------------------------
-SHORTEST PATH: 
-x x S @ . . x x x x 
-x x x @ . . . x x x 
-x x x @ . . . x x x 
-. . @ @ . . . x x x 
-@ @ @ x x x x x x x 
-@ x x x x x x x x x 
-@ @ @ x x x x x x x 
-x x @ x x x x x x x 
-x x @ @ x x x x x x 
-x x x @ @ G x x x x 
-----------------------------------------
-GENERATED MAZE:
-. . . . x x x . . . 
-. . . . . . . . . . 
-x x . . . . . . . x 
-x x x x . . . . . x 
-x x . . . . . . . x 
-x x . . . . . x . x 
-x . . x x x . . . x 
-S . . x x x . . G x 
-. . . . . x . x x x 
-. . . . . . . x x x 
-----------------------------------------
-VISITED NODES DFS: 
-@ @ @ @ x x x . . . 
-@ @ @ @ @ @ @ @ @ . 
-x x @ @ @ @ @ @ @ x 
-x x x x @ @ @ @ @ x 
-x x . @ @ @ @ @ @ x 
-x x @ @ @ @ @ x @ x 
-x @ @ x x x . . @ x 
-S @ @ x x x . . G x 
-@ @ @ . . x . x x x 
-@ @ @ . . . . x x x 
-----------------------------------------
-VISITED NODES BFS: 
-. @ @ @ x x x @ @ . 
-@ @ @ @ @ @ @ @ @ @ 
-x x @ @ @ @ @ @ @ x 
-x x x x @ @ @ @ @ x 
-x x @ @ @ @ @ @ @ x 
-x x @ @ @ @ @ x . x 
-x @ @ x x x @ @ @ x 
-S @ @ x x x @ @ G x 
-@ @ @ @ @ x @ x x x 
-@ @ @ @ @ @ @ x x x 
-----------------------------------------
-VISITED NODES A*: 
-. . . . x x x . . . 
-. . . . . . . . . . 
-x x . . . . . . . x 
-x x x x . . . . . x 
-x x . . . . . . . x 
-x x @ . . . . x . x 
-x @ @ x x x @ . . x 
-S @ @ x x x @ @ G x 
-@ @ @ @ @ x @ x x x 
-. . @ @ @ @ @ x x x 
-----------------------------------------
-SHORTEST PATH: 
-. . . . x x x . . . 
-. . . . . . . . . . 
-x x . . . . . . . x 
-x x x x . . . . . x 
-x x . . . . . . . x 
-x x @ @ @ @ @ x . x 
-x @ @ x x x @ . . x 
-S @ . x x x @ @ G x 
-. . . . . x . x x x 
-. . . . . . . x x x 
-----------------------------------------
-GENERATED MAZE:
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-. S x x x x x x x x 
-. x x G x x x x x x 
-. . . . x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-@ S x x x x x x x x 
-@ x x G x x x x x x 
-@ @ @ @ x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-@ S x x x x x x x x 
-@ x x G x x x x x x 
-@ @ @ @ x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-@ S x x x x x x x x 
-@ x x G x x x x x x 
-@ @ @ @ x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-@ S x x x x x x x x 
-@ x x G x x x x x x 
-@ @ @ @ x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-GENERATED MAZE:
-. S x x x x x x x x 
-. . . x x x x x x x 
-. . . . . x x x . . 
-. . x x . x x x . . 
-x x x x . x x x . . 
-x x x x . x . . . . 
-x x x x . . . . . . 
-x x x x x . . . . . 
-x x x x . . . . . . 
-x x G . . . . . . . 
-----------------------------------------
-VISITED NODES DFS: 
-@ S x x x x x x x x 
-@ @ @ x x x x x x x 
-@ @ @ @ @ x x x @ @ 
-@ @ x x @ x x x @ @ 
-x x x x @ x x x @ @ 
-x x x x @ x @ @ @ @ 
-x x x x @ @ @ @ @ @ 
-x x x x x @ @ @ @ @ 
-x x x x . @ @ @ @ @ 
-x x G @ @ @ @ @ @ @ 
-----------------------------------------
-VISITED NODES BFS: 
-@ S x x x x x x x x 
-@ @ @ x x x x x x x 
-@ @ @ @ @ x x x @ . 
-. @ x x @ x x x @ @ 
-x x x x @ x x x @ @ 
-x x x x @ x @ @ @ @ 
-x x x x @ @ @ @ @ @ 
-x x x x x @ @ @ @ @ 
-x x x x @ @ @ @ @ @ 
-x x G @ @ @ @ @ @ . 
-----------------------------------------
-VISITED NODES A*: 
-@ S x x x x x x x x 
-@ @ @ x x x x x x x 
-@ @ @ @ @ x x x . . 
-@ @ x x @ x x x . . 
-x x x x @ x x x . . 
-x x x x @ x . . . . 
-x x x x @ @ @ . . . 
-x x x x x @ @ . . . 
-x x x x @ @ @ . . . 
-x x G @ @ @ . . . . 
-----------------------------------------
-SHORTEST PATH: 
-. S x x x x x x x x 
-. @ . x x x x x x x 
-. @ @ @ @ x x x . . 
-. . x x @ x x x . . 
-x x x x @ x x x . . 
-x x x x @ x . . . . 
-x x x x @ @ . . . . 
-x x x x x @ . . . . 
-x x x x . @ . . . . 
-x x G @ @ @ . . . . 
-----------------------------------------
-GENERATED MAZE:
-. . . . . . . x x x 
+x x G . . . x x x x 
+. . x . . . x . . x 
+. x x x x . x x . x 
+. . . . x . . x x x 
+x . . x . S x . . . 
+. x . . . . x x x x 
+x . . x . x x x . . 
 . . . . . . . . x x 
-. . x . . . . . x x 
-. . . . . . . x x x 
-. . . . . . . x x G 
-x x S . x x . . x . 
-x x x x x x x . x . 
-x x x x x x x . . . 
-x x x x x x x x x x 
-x x x x x x x x x x 
+x x x x . x . x x x 
+. x x . x x x x x . 
 ----------------------------------------
 VISITED NODES DFS: 
-. @ @ @ @ @ @ x x x 
-@ @ . @ @ @ @ @ x x 
-@ . x @ @ @ @ @ x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x G 
-x x S . x x @ @ x @ 
-x x x x x x x @ x @ 
-x x x x x x x @ @ @ 
-x x x x x x x x x x 
-x x x x x x x x x x 
+x x G @ @ @ x x x x 
+@ @ x . . @ x . . x 
+@ x x x x @ x x . x 
+@ @ @ @ x @ @ x x x 
+x @ @ x @ S x . . . 
+. x @ @ @ @ x x x x 
+x @ @ x @ x x x . . 
+@ @ @ @ @ @ @ @ x x 
+x x x x @ x @ x x x 
+. x x . x x x x x . 
 ----------------------------------------
 VISITED NODES BFS: 
-. @ . @ @ @ . x x x 
-@ @ @ @ @ @ @ . x x 
-@ @ x @ @ @ @ @ x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x G 
-x x S @ x x @ @ x @ 
-x x x x x x x @ x @ 
-x x x x x x x @ @ @ 
-x x x x x x x x x x 
-x x x x x x x x x x 
+x x G @ @ @ x x x x 
+@ . x @ @ @ x . . x 
+@ x x x x @ x x . x 
+@ @ @ . x @ . x x x 
+x @ @ x @ S x . . . 
+. x @ @ @ @ x x x x 
+x @ @ x @ x x x . . 
+. @ @ @ @ @ @ . x x 
+x x x x . x . x x x 
+. x x . x x x x x . 
 ----------------------------------------
 VISITED NODES A*: 
-. . . . . . . x x x 
-. . . . . . @ @ x x 
-. . x . . @ @ @ x x 
-. . . @ @ @ @ x x x 
-. . @ @ @ @ @ x x G 
-x x S @ x x @ @ x @ 
-x x x x x x x @ x @ 
-x x x x x x x @ @ @ 
-x x x x x x x x x x 
-x x x x x x x x x x 
+x x G @ @ @ x x x x 
+. . x @ @ @ x . . x 
+. x x x x @ x x . x 
+. . . . x @ @ x x x 
+x . . x @ S x . . . 
+. x . . . @ x x x x 
+x . . x . x x x . . 
+. . . . . . . . x x 
+x x x x . x . x x x 
+. x x . x x x x x . 
 ----------------------------------------
 SHORTEST PATH: 
-. . . . . . . x x x 
+x x G # # # x x x x 
+. . x . . # x . . x 
+. x x x x # x x . x 
+. . . . x # . x x x 
+x . . x . S x . . . 
+. x . . . . x x x x 
+x . . x . x x x . . 
 . . . . . . . . x x 
-. . x . . . . . x x 
-. . . . . . . x x x 
-. . @ @ @ @ @ x x G 
-x x S . x x @ @ x @ 
-x x x x x x x @ x @ 
-x x x x x x x @ @ @ 
-x x x x x x x x x x 
-x x x x x x x x x x 
+x x x x . x . x x x 
+. x x . x x x x x . 
 ----------------------------------------
 GENERATED MAZE:
-. . . . . x x x x x 
-. . . G . x x x x x 
-. . . x x . . x x x 
+x . . . x x x . . x 
+x x x . G . . . . x 
+x x x x . x . . x x 
+x . x x . . x x . . 
+. . x x S x . x x x 
+x . x x . x x . x . 
+. x . . . x . . . . 
+. x . x . . . x . . 
+x x x . . x x . x x 
+x . . x . x x x . . 
+----------------------------------------
+VISITED NODES DFS: 
+x . . . x x x . . x 
+x x x . G . . . . x 
+x x x x @ x . . x x 
+x . x x @ . x x . . 
+. . x x S x . x x x 
+x . x x @ x x @ x @ 
+. x @ @ @ x @ @ @ @ 
+. x @ x @ @ @ x @ @ 
+x x x @ @ x x . x x 
+x . . x @ x x x . . 
+----------------------------------------
+VISITED NODES BFS: 
+x . . . x x x . . x 
+x x x . G . . . . x 
+x x x x @ x . . x x 
+x . x x @ . x x . . 
+. . x x S x . x x x 
+x . x x @ x x . x . 
+. x . . @ x . . . . 
+. x . x . . . x . . 
+x x x . . x x . x x 
+x . . x . x x x . . 
+----------------------------------------
+VISITED NODES A*: 
+x . . . x x x . . x 
+x x x . G . . . . x 
+x x x x @ x . . x x 
+x . x x @ @ x x . . 
+. . x x S x . x x x 
+x . x x @ x x . x . 
+. x . . . x . . . . 
+. x . x . . . x . . 
+x x x . . x x . x x 
+x . . x . x x x . . 
+----------------------------------------
+SHORTEST PATH: 
+x . . . x x x . . x 
+x x x . G . . . . x 
+x x x x # x . . x x 
+x . x x # . x x . . 
+. . x x S x . x x x 
+x . x x . x x . x . 
+. x . . . x . . . . 
+. x . x . . . x . . 
+x x x . . x x . x x 
+x . . x . x x x . . 
+----------------------------------------
+GENERATED MAZE:
+. x x x x x x x . . 
+. . x x . x . . . x 
+. x . x x . . x . . 
+x . x x x . x . x . 
+. x x . . x x . x . 
+x . x . . x x x x . 
+x . x x x . x x x . 
+. . . . . . . G x x 
+x x . . x . . x . . 
+. x S . x x . x . x 
+----------------------------------------
+VISITED NODES DFS: 
+. x x x x x x x . . 
+. . x x . x . . . x 
+. x . x x . . x . . 
+x . x x x . x . x . 
+. x x . . x x . x . 
+x @ x . . x x x x . 
+x @ x x x . x x x . 
+@ @ @ @ @ @ @ G x x 
+x x @ @ x @ @ x . . 
+. x S @ x x @ x . x 
+----------------------------------------
+VISITED NODES BFS: 
+. x x x x x x x . . 
+. . x x . x . . . x 
+. x . x x . . x . . 
+x . x x x . x . x . 
+. x x . . x x . x . 
+x . x . . x x x x . 
+x @ x x x . x x x . 
+. @ @ @ @ @ @ G x x 
+x x @ @ x @ @ x . . 
+. x S @ x x . x . x 
+----------------------------------------
+VISITED NODES A*: 
+. x x x x x x x . . 
+. . x x . x . . . x 
+. x . x x . . x . . 
+x . x x x . x . x . 
+. x x . . x x . x . 
+x . x . . x x x x . 
+x . x x x @ x x x . 
+. . @ @ @ @ @ G x x 
+x x @ @ x @ . x . . 
+. x S @ x x . x . x 
+----------------------------------------
+SHORTEST PATH: 
+. x x x x x x x . . 
+. . x x . x . . . x 
+. x . x x . . x . . 
+x . x x x . x . x . 
+. x x . . x x . x . 
+x . x . . x x x x . 
+x . x x x . x x x . 
+. . # # # # # G x x 
+x x # . x . . x . . 
+. x S . x x . x . x 
+----------------------------------------
+GENERATED MAZE:
+. x . . x x x x . . 
+. x . . . . x x x x 
+. S . . . . . . G x 
+. . x x . x x x x x 
+. . x x x x . . x x 
+x x x . x x x x . x 
+. x . x . x . x . . 
+. x . x x . x . x . 
+x . . x x x x x . . 
+. . . x . . . . x x 
+----------------------------------------
+VISITED NODES DFS: 
+. x . . x x x x . . 
+. x . @ @ @ x x x x 
+. S @ @ . @ @ @ G x 
+. . x x . x x x x x 
+. . x x x x . . x x 
+x x x . x x x x . x 
+. x . x . x . x . . 
+. x . x x . x . x . 
+x . . x x x x x . . 
+. . . x . . . . x x 
+----------------------------------------
+VISITED NODES BFS: 
+. x @ . x x x x . . 
+@ x @ @ @ . x x x x 
+@ S @ @ @ @ @ @ G x 
+@ @ x x . x x x x x 
+. @ x x x x . . x x 
+x x x . x x x x . x 
+. x . x . x . x . . 
+. x . x x . x . x . 
+x . . x x x x x . . 
+. . . x . . . . x x 
+----------------------------------------
+VISITED NODES A*: 
+. x . . x x x x . . 
+. x @ @ @ @ x x x x 
+@ S @ @ @ @ @ @ G x 
+. @ x x @ x x x x x 
+. . x x x x . . x x 
+x x x . x x x x . x 
+. x . x . x . x . . 
+. x . x x . x . x . 
+x . . x x x x x . . 
+. . . x . . . . x x 
+----------------------------------------
+SHORTEST PATH: 
+. x . . x x x x . . 
+. x . . . . x x x x 
+. S # # # # # # G x 
+. . x x . x x x x x 
+. . x x x x . . x x 
+x x x . x x x x . x 
+. x . x . x . x . . 
+. x . x x . x . x . 
+x . . x x x x x . . 
+. . . x . . . . x x 
+----------------------------------------
+GENERATED MAZE:
+. x . . x x . x x x 
+x . . . x x . x x x 
+x . . x . x x x . . 
+x x x . . x . x x x 
+. . x G . . . . . x 
+. x . x . . . x . . 
+. x x x . x . x . . 
+x x x . x x x . . . 
+. x . x . x . x S . 
+. x x . x . x x . x 
+----------------------------------------
+VISITED NODES DFS: 
+. x . . x x . x x x 
+x . . . x x . x x x 
+x . . x . x x x . . 
+x x x . . x @ x x x 
+. . x G @ @ @ @ @ x 
+. x . x . . . x @ @ 
+. x x x . x . x @ @ 
+x x x . x x x @ @ @ 
+. x . x . x . x S @ 
+. x x . x . x x @ x 
+----------------------------------------
+VISITED NODES BFS: 
+. x . . x x . x x x 
+x . . . x x . x x x 
+x . . x . x x x . . 
+x x x . . x . x x x 
+. . x G @ @ @ @ @ x 
+. x . x . @ @ x @ . 
+. x x x . x . x @ @ 
+x x x . x x x . @ @ 
+. x . x . x . x S @ 
+. x x . x . x x . x 
+----------------------------------------
+VISITED NODES A*: 
+. x . . x x . x x x 
+x . . . x x . x x x 
+x . . x . x x x . . 
+x x x . . x @ x x x 
+. . x G @ @ @ @ @ x 
+. x . x . @ @ x @ @ 
+. x x x . x . x @ @ 
+x x x . x x x @ @ @ 
+. x . x . x . x S @ 
+. x x . x . x x @ x 
+----------------------------------------
+SHORTEST PATH: 
+. x . . x x . x x x 
+x . . . x x . x x x 
+x . . x . x x x . . 
+x x x . . x . x x x 
+. . x G # # # # # x 
+. x . x . . . x # . 
+. x x x . x . x # . 
+x x x . x x x . # . 
+. x . x . x . x S . 
+. x x . x . x x . x 
+----------------------------------------
+GENERATED MAZE:
+x . x . . x S x . . 
+. x . x x x . . . . 
+. x . . x x . x . . 
+x . . x . x . x . x 
+. x x . x x . x . x 
+x x . x . x . x x x 
+x x x x . x . . x x 
+. x . x x . . x . x 
+x . . . x x . x . . 
+x x . x . x G . . . 
+----------------------------------------
+VISITED NODES DFS: 
+x . x . . x S x @ @ 
+. x . x x x @ @ @ @ 
+. x . . x x @ x @ @ 
+x . . x . x @ x @ x 
+. x x . x x @ x @ x 
+x x . x . x @ x x x 
+x x x x . x @ @ x x 
+. x . x x @ @ x . x 
+x . . . x x @ x . . 
+x x . x . x G . . . 
+----------------------------------------
+VISITED NODES BFS: 
+x . x . . x S x @ . 
+. x . x x x @ @ @ @ 
+. x . . x x @ x @ . 
+x . . x . x @ x @ x 
+. x x . x x @ x . x 
+x x . x . x @ x x x 
+x x x x . x @ . x x 
+. x . x x . @ x . x 
+x . . . x x @ x . . 
+x x . x . x G . . . 
+----------------------------------------
+VISITED NODES A*: 
+x . x . . x S x . . 
+. x . x x x @ @ . . 
+. x . . x x @ x . . 
+x . . x . x @ x . x 
+. x x . x x @ x . x 
+x x . x . x @ x x x 
+x x x x . x @ @ x x 
+. x . x x @ @ x . x 
+x . . . x x @ x . . 
+x x . x . x G . . . 
+----------------------------------------
+SHORTEST PATH: 
+x . x . . x S x . . 
+. x . x x x # . . . 
+. x . . x x # x . . 
+x . . x . x # x . x 
+. x x . x x # x . x 
+x x . x . x # x x x 
+x x x x . x # . x x 
+. x . x x . # x . x 
+x . . . x x # x . . 
+x x . x . x G . . . 
+----------------------------------------
+GENERATED MAZE:
+x x . . . x x x x . 
+. . . x . x . x x . 
+x x x . . . . x . x 
+. x . x . x . x . x 
+x x . x x x . x . . 
+. . x x . x . x S G 
+. . . . x x x x . . 
+x . x x x x . . . . 
+x . . . x x . . . x 
+x x . . . x x x x x 
+----------------------------------------
+VISITED NODES DFS: 
+x x . . . x x x x . 
+. . . x . x . x x . 
+x x x . . . . x . x 
+. x . x . x . x . x 
+x x . x x x . x . . 
+. . x x . x . x S G 
+. . . . x x x x . . 
+x . x x x x . . . . 
+x . . . x x . . . x 
+x x . . . x x x x x 
+----------------------------------------
+VISITED NODES BFS: 
+x x . . . x x x x . 
+. . . x . x . x x . 
+x x x . . . . x . x 
+. x . x . x . x . x 
+x x . x x x . x . . 
+. . x x . x . x S G 
+. . . . x x x x . . 
+x . x x x x . . . . 
+x . . . x x . . . x 
+x x . . . x x x x x 
+----------------------------------------
+VISITED NODES A*: 
+x x . . . x x x x . 
+. . . x . x . x x . 
+x x x . . . . x . x 
+. x . x . x . x . x 
+x x . x x x . x . . 
+. . x x . x . x S G 
+. . . . x x x x . . 
+x . x x x x . . . . 
+x . . . x x . . . x 
+x x . . . x x x x x 
+----------------------------------------
+SHORTEST PATH: 
+x x . . . x x x x . 
+. . . x . x . x x . 
+x x x . . . . x . x 
+. x . x . x . x . x 
+x x . x x x . x . . 
+. . x x . x . x S G 
+. . . . x x x x . . 
+x . x x x x . . . . 
+x . . . x x . . . x 
+x x . . . x x x x x 
+----------------------------------------
+GENERATED MAZE:
+. x x . . x x . . . 
+x . . . . x x x x . 
+. x . x . x . x x . 
+. . . . x x x x . . 
+. x . x x . . . x x 
+x . x x x x . x x x 
+x . x . x . G . . . 
+. x . x . x x x x . 
+x . x . . . . x . S 
+x . x x x . x x x . 
+----------------------------------------
+VISITED NODES DFS: 
+. x x . . x x . . . 
+x . . . . x x x x . 
+. x . x . x . x x . 
+. . . . x x x x . . 
+. x . x x . . . x x 
+x . x x x x . x x x 
+x . x . x . G @ @ @ 
+. x . x . x x x x @ 
+x . x . . . . x @ S 
+x . x x x . x x x @ 
+----------------------------------------
+VISITED NODES BFS: 
+. x x . . x x . . . 
+x . . . . x x x x . 
+. x . x . x . x x . 
+. . . . x x x x . . 
+. x . x x . . . x x 
+x . x x x x . x x x 
+x . x . x . G @ @ @ 
+. x . x . x x x x @ 
+x . x . . . . x . S 
+x . x x x . x x x . 
+----------------------------------------
+VISITED NODES A*: 
+. x x . . x x . . . 
+x . . . . x x x x . 
+. x . x . x . x x . 
+. . . . x x x x . . 
+. x . x x . . . x x 
+x . x x x x . x x x 
+x . x . x . G @ @ @ 
+. x . x . x x x x @ 
+x . x . . . . x @ S 
+x . x x x . x x x @ 
+----------------------------------------
+SHORTEST PATH: 
+. x x . . x x . . . 
+x . . . . x x x x . 
+. x . x . x . x x . 
+. . . . x x x x . . 
+. x . x x . . . x x 
+x . x x x x . x x x 
+x . x . x . G # # # 
+. x . x . x x x x # 
+x . x . . . . x . S 
+x . x x x . x x x . 
+----------------------------------------
+GENERATED MAZE:
+. x . x . x x x . . 
+x x . . . . x x x . 
+x . x x x x . x . . 
+x x x . x x . . x . 
+. x . x x . . . G . 
+x . x . x S . x x . 
+x x . x . . x x . x 
 . . . x . . . x x x 
-. . . . . . . x x x 
-. . . . . . . x x x 
-. . . . . . . x x x 
-. . . . . . . x x x 
-. . . . . . . x x S 
-. . . . . . . . . . 
+. x x x x . . . . . 
+x x x x . x x . . . 
 ----------------------------------------
 VISITED NODES DFS: 
-. . @ @ @ x x x x x 
-. . @ G @ x x x x x 
-. @ @ x x @ @ x x x 
-@ @ @ x @ @ @ x x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x S 
-@ @ @ @ @ @ @ @ @ @ 
+. x . x . x x x . . 
+x x . . . . x x x . 
+x . x x x x @ x . . 
+x x x . x x @ @ x . 
+. x . x x @ @ @ G . 
+x . x . x S @ x x . 
+x x . x @ @ x x . x 
+. . . x @ @ @ x x x 
+. x x x x @ @ @ @ @ 
+x x x x . x x @ @ @ 
 ----------------------------------------
 VISITED NODES BFS: 
-. . . . . x x x x x 
-. @ @ G . x x x x x 
-@ @ @ x x . @ x x x 
-@ @ @ x . @ @ x x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x x 
-@ @ @ @ @ @ @ x x S 
-@ @ @ @ @ @ @ @ @ @ 
+. x . x . x x x . . 
+x x . . . . x x x . 
+x . x x x x . x . . 
+x x x . x x @ . x . 
+. x . x x @ @ @ G . 
+x . x . x S @ x x . 
+x x . x @ @ x x . x 
+. . . x . @ @ x x x 
+. x x x x @ . . . . 
+x x x x . x x . . . 
 ----------------------------------------
 VISITED NODES A*: 
-. . . . . x x x x x 
-. @ @ G . x x x x x 
-. @ @ x x @ @ x x x 
-. @ @ x @ @ @ x x x 
-. @ @ @ @ @ @ x x x 
-. . @ @ @ @ @ x x x 
-. . . . . @ @ x x x 
-. . . . . @ @ x x x 
-. . . . . @ @ x x S 
-. . . . . @ @ @ @ @ 
+. x . x . x x x . . 
+x x . . . . x x x . 
+x . x x x x . x . . 
+x x x . x x @ . x . 
+. x . x x @ @ @ G . 
+x . x . x S @ x x . 
+x x . x . @ x x . x 
+. . . x . . . x x x 
+. x x x x . . . . . 
+x x x x . x x . . . 
 ----------------------------------------
 SHORTEST PATH: 
-. . . . . x x x x x 
-. . @ G . x x x x x 
-. . @ x x . . x x x 
-. . @ x . . . x x x 
-. . @ @ @ @ @ x x x 
-. . . . . . @ x x x 
-. . . . . . @ x x x 
-. . . . . . @ x x x 
-. . . . . . @ x x S 
-. . . . . . @ @ @ @ 
-----------------------------------------
-GENERATED MAZE:
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-. . x x x x x x x x 
-. . x x x x x x x x 
-S . . . . x x x x x 
-. . . . . . G x x x 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-@ @ x x x x x x x x 
-@ @ x x x x x x x x 
-S @ @ @ @ x x x x x 
-@ @ @ @ @ @ G x x x 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-@ . x x x x x x x x 
-@ @ x x x x x x x x 
-S @ @ @ @ x x x x x 
-@ @ @ @ @ @ G x x x 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-. . x x x x x x x x 
-@ @ x x x x x x x x 
-S @ @ @ @ x x x x x 
-@ @ @ @ @ @ G x x x 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-. . x x x x x x x x 
-. . x x x x x x x x 
-S . . . . x x x x x 
-@ @ @ @ @ @ G x x x 
-----------------------------------------
-GENERATED MAZE:
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x . . . 
-x x x . S . . . x . 
-. . . . x . x x x . 
-. . . . . . . . . . 
-x x x x x x . . . . 
-x x x x . . . . . . 
-x x x . . x x x x x 
-x x x G x x x x x x 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x @ @ @ 
-x x x @ S @ @ @ x @ 
-. . . . x . x x x @ 
-. . . . . . @ @ @ @ 
-x x x x x x @ @ @ @ 
-x x x x @ @ @ @ @ @ 
-x x x @ @ x x x x x 
-x x x G x x x x x x 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x @ @ @ 
-x x x @ S @ @ @ x @ 
-@ @ @ @ x @ x x x . 
-. @ @ @ . @ @ @ @ @ 
-x x x x x x @ @ @ @ 
-x x x x @ @ @ @ @ . 
-x x x @ @ x x x x x 
-x x x G x x x x x x 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x . . . 
-x x x @ S @ . . x . 
-@ @ @ @ x @ x x x . 
-@ @ @ @ @ @ @ @ . . 
-x x x x x x @ @ . . 
-x x x x @ @ @ @ . . 
-x x x @ @ x x x x x 
-x x x G x x x x x x 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x . . . 
-x x x . S @ . . x . 
-. . . . x @ x x x . 
-. . . . . @ @ . . . 
-x x x x x x @ . . . 
-x x x x @ @ @ . . . 
-x x x @ @ x x x x x 
-x x x G x x x x x x 
-----------------------------------------
-GENERATED MAZE:
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x G . x . . x x x 
-. . . . . . . . . S 
-. . . . . . . . . . 
-x . . . . . . . . . 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x G @ x @ @ x x x 
-. . . @ @ @ @ @ @ S 
-. . . @ @ @ . . . @ 
-x . . @ @ @ . . . . 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x G @ x . @ x x x 
-@ @ @ @ @ @ @ @ @ S 
-. @ @ @ @ @ @ @ @ @ 
-x . @ @ @ @ @ @ @ @ 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x G @ x @ @ x x x 
-. . @ @ @ @ @ @ @ S 
-. . . @ @ @ @ @ @ @ 
-x . . . . . . . . . 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x G @ x . . x x x 
-. . . @ @ @ @ @ @ S 
-. . . . . . . . . . 
-x . . . . . . . . . 
-----------------------------------------
-GENERATED MAZE:
-. . . . . . . . . x 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . x x . 
-x . . . . . . x S G 
-x . . . . . . . . x 
-x . . . . . . . x x 
-x . . . . . . . x x 
-----------------------------------------
-VISITED NODES DFS: 
-. . . . . . . . . x 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . x x . 
-x . . . . . . x S G 
-x . . . . . . . @ x 
-x . . . . . . . x x 
-x . . . . . . . x x 
-----------------------------------------
-VISITED NODES BFS: 
-. . . . . . . . . x 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . x x . 
-x . . . . . . x S G 
-x . . . . . . . . x 
-x . . . . . . . x x 
-x . . . . . . . x x 
-----------------------------------------
-VISITED NODES A*: 
-. . . . . . . . . x 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . x x . 
-x . . . . . . x S G 
-x . . . . . . . . x 
-x . . . . . . . x x 
-x . . . . . . . x x 
-----------------------------------------
-SHORTEST PATH: 
-. . . . . . . . . x 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . . . . 
-. . . . . . . x x . 
-x . . . . . . x S G 
-x . . . . . . . . x 
-x . . . . . . . x x 
-x . . . . . . . x x 
-----------------------------------------
-GENERATED MAZE:
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x S 
-x x x x x x x x x . 
-x x x x . . . . . . 
-x G . . . x x x . . 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x S 
-x x x x x x x x x @ 
-x x x x @ @ @ @ @ @ 
-x G @ @ @ x x x . . 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x S 
-x x x x x x x x x @ 
-x x x x @ @ @ @ @ @ 
-x G @ @ @ x x x . @ 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x S 
-x x x x x x x x x @ 
-x x x x @ @ @ @ @ @ 
-x G @ @ @ x x x @ @ 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x S 
-x x x x x x x x x @ 
-x x x x @ @ @ @ @ @ 
-x G @ @ @ x x x . . 
-----------------------------------------
-GENERATED MAZE:
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x S x x 
-x x x x x x x . x x 
-x x x x x x G . x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x S x x 
-x x x x x x x @ x x 
-x x x x x x G @ x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x S x x 
-x x x x x x x @ x x 
-x x x x x x G @ x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x S x x 
-x x x x x x x @ x x 
-x x x x x x G @ x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x S x x 
-x x x x x x x @ x x 
-x x x x x x G @ x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-GENERATED MAZE:
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x S G x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x S G x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x S G x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x S G x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x S G x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-----------------------------------------
-GENERATED MAZE:
-. . . . . S . . . . 
-. . . . . . . . . . 
-. . . . x x . . . . 
-. . . . . . . x x x 
-. . . . . . . x . . 
-. . . . . . . G . . 
-. . . . . . x . . . 
-. . . . x . . . . . 
-. . . . x x x x . . 
-x x x x x x x x . . 
-----------------------------------------
-VISITED NODES DFS: 
-@ @ @ @ @ S @ @ @ @ 
-@ @ @ @ @ @ @ @ @ @ 
-@ @ @ @ x x . . @ @ 
-@ @ @ @ @ . . x x x 
-@ @ @ @ @ . . x @ @ 
-@ @ @ @ @ . . G @ @ 
-@ @ @ @ @ @ x . @ @ 
-@ @ @ @ x @ @ @ @ @ 
-@ @ @ @ x x x x @ @ 
-x x x x x x x x @ @ 
-----------------------------------------
-VISITED NODES BFS: 
-@ @ @ @ @ S @ @ @ @ 
-@ @ @ @ @ @ @ @ @ @ 
-@ @ @ @ x x @ @ @ . 
-. @ @ @ @ @ @ x x x 
-. . @ @ @ @ @ x . . 
-. . . @ . @ @ G . . 
-. . . . . . x . . . 
-. . . . x . . . . . 
-. . . . x x x x . . 
-x x x x x x x x . . 
-----------------------------------------
-VISITED NODES A*: 
-. . . . @ S @ . . . 
-. . . . @ @ @ @ . . 
-. . . . x x @ @ . . 
-. . . . . @ @ x x x 
-. . . . . @ @ x . . 
-. . . . . @ @ G . . 
-. . . . . . x . . . 
-. . . . x . . . . . 
-. . . . x x x x . . 
-x x x x x x x x . . 
-----------------------------------------
-SHORTEST PATH: 
-. . . . . S . . . . 
-. . . . . @ @ . . . 
-. . . . x x @ . . . 
-. . . . . . @ x x x 
-. . . . . . @ x . . 
-. . . . . . @ G . . 
-. . . . . . x . . . 
-. . . . x . . . . . 
-. . . . x x x x . . 
-x x x x x x x x . . 
-----------------------------------------
-GENERATED MAZE:
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x . . G x x x x 
-x x . . x x x x . . 
-x x . . . x x x . . 
-x x . . . . x x . . 
-x x x x x . . . . . 
-x x x x x . . . . . 
-x x x x S . . . . . 
-----------------------------------------
-VISITED NODES DFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x @ @ G x x x x 
-x x @ @ x x x x @ @ 
-x x @ @ . x x x @ @ 
-x x @ @ @ @ x x @ @ 
-x x x x x @ @ @ @ @ 
-x x x x x @ @ @ @ @ 
-x x x x S @ @ @ @ @ 
-----------------------------------------
-VISITED NODES BFS: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x @ @ G x x x x 
-x x . @ x x x x @ . 
-x x @ @ @ x x x @ @ 
-x x @ @ @ @ x x @ @ 
-x x x x x @ @ @ @ @ 
-x x x x x @ @ @ @ @ 
-x x x x S @ @ @ @ @ 
-----------------------------------------
-VISITED NODES A*: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x @ @ G x x x x 
-x x @ @ x x x x . . 
-x x @ @ @ x x x . . 
-x x . @ @ @ x x . . 
-x x x x x @ @ . . . 
-x x x x x @ @ . . . 
-x x x x S @ @ . . . 
-----------------------------------------
-SHORTEST PATH: 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x x x x x x x x 
-x x x @ @ G x x x x 
-x x . @ x x x x . . 
-x x . @ @ x x x . . 
-x x . . @ @ x x . . 
-x x x x x @ . . . . 
-x x x x x @ . . . . 
-x x x x S @ . . . . 
+. x . x . x x x . . 
+x x . . . . x x x . 
+x . x x x x . x . . 
+x x x . x x . . x . 
+. x . x x # # # G . 
+x . x . x S . x x . 
+x x . x . . x x . x 
+. . . x . . . x x x 
+. x x x x . . . . . 
+x x x x . x x . . . 
