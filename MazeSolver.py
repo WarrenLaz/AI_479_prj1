@@ -24,18 +24,20 @@ class MazeSolver:
         return listpoints
     
     def DFS(maze, s):
+
         l = len(maze)
         w = len(maze[0])
 
         DFSmaze = maze
         visited = [[0 for _ in range(w)] for _ in range(l)]
+        inorder = []
         stack = []
         stack.append(s)
         while(stack):
             point = stack[len(stack)-1]
             x = point[1]
             y = point[0]
-
+            inorder.append([x,y])
             listpoints = []
 
             listpoints = MazeSolver.checkBounds(x, y, w, l, visited, DFSmaze, listpoints)
@@ -52,25 +54,24 @@ class MazeSolver:
             else:
                 stack.pop()
 
-        return DFSmaze
+        return DFSmaze, inorder
 
     def BFS(maze, s):
 
         l = len(maze)
         w = len(maze[0])
-
+        visitedinOrder = []
         BFSmaze = maze
         visited = [[0 for _ in range(w)] for _ in range(l)]
         queue1 = []
         queue1.append(s)
-
-
 
         while(queue1):
             visited[queue1[0][0]][queue1[0][1]] = 1
             point = queue1[0]
             x = point[1]
             y = point[0]
+            visitedinOrder.append([x,y])
             listpoints = []
 
             listpoints = MazeSolver.checkBounds(x,y, w, l, visited, BFSmaze, listpoints)
@@ -91,7 +92,7 @@ class MazeSolver:
             if(queue1):
                 queue1.pop(0)
 
-        return BFSmaze
+        return BFSmaze, visitedinOrder
 
     def Djikstras(maze, s, end):
         l = len(maze)
@@ -174,9 +175,12 @@ class MazeSolver:
 
     def Heuristic(x1, x2, y1, y2):
         return  math.sqrt( (x1 - x2)**2 + ((y1 - y2)**2))
+    
+    def Heuristic2(x1, x2, y1, y2):
+        return  abs(x1 - x2) + abs(y1 - y2) 
+
 
     def Astar(maze, s, g):
-        fn = 0
         l = len(maze)
         w = len(maze[0])
         Astarmaze = maze
@@ -212,6 +216,7 @@ class MazeSolver:
                         return Astarmaze.copy()
                     elif(not(Astarmaze[c[1][0]][c[1][1]] == 'S' or Astarmaze[c[1][0]][c[1][1]] == 'G')):
                         Astarmaze[c[1][0]][c[1][1]] = '@' 
+
             if(queue1):
                 queue1.pop(0)
 

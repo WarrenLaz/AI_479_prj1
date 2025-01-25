@@ -6,6 +6,7 @@ class Maze:
         pass
 
     def createMaze(x, y, density): #10x10
+        
         l,w = (y,x) #x = 10, y = 5 therefore l = 5, w = 10
         maze = [['x' for _ in range(w)] for _ in range(l)] #5x10
 
@@ -27,6 +28,7 @@ class Maze:
         visited[s[0]][s[1]] = 1
         visited[e[0]][e[1]] = 1
         temp = s[0]
+
         if s[0] > e[0]:
             while temp != e[0]:
                 temp = temp - 1
@@ -61,6 +63,7 @@ class Maze:
             if visited[randpoint1][randpoint2] != 1:
                 visited[randpoint1][randpoint2] = 1
                 maze[randpoint1][randpoint2] = '.'
+
         return maze
 
     def sumLL(visited):
