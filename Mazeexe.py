@@ -3,9 +3,7 @@ from MazeGen import Maze
 import copy
 import math
 import heapq as h
-
-maze_0= Maze.createMaze(36,36,0.5)
-maze_ = maze_0[0]
+import time
 # pygame setup
 pygame.init()
 screen = pygame.display.set_mode((720, 720))
@@ -52,13 +50,29 @@ def drawGrid(mazes):
             elif(mazes[int(x/blockSize)][int(y/blockSize)] == 'S'):
                 pygame.draw.rect(screen, "green", b )
 
+def startmaze():
+    global maze_0
+    global maze_
+    global visited
+    global queue1
+    global w
+    global l
+    global s
+    global g
+    maze_0 = Maze.createMaze(36,36,0.5)
+    maze_ = maze_0[0]
 
-l = len(maze_[1])
-w = len(maze_[0])
-visited = [[0 for _ in range(w)] for _ in range(l)]
-s = maze_0[1]
-g = maze_0[2]
-queue1 = [(Heuristic(s[0], g[0], s[1], g[1]), s)]
+    l = len(maze_[1])
+    w = len(maze_[0])
+    visited = [[0 for _ in range(w)] for _ in range(l)]
+    s = maze_0[1]
+    g = maze_0[2]
+    queue1 = [(Heuristic(s[0], g[0], s[1], g[1]), s)]
+
+font = pygame.font.Font('freesansbold.ttf', 32)
+startmaze()
+
+start_time = time.time()
 
 while running:
     for event in pygame.event.get():
@@ -87,12 +101,19 @@ while running:
                 if(maze_[c[1][0]][c[1][1]] == 'G'):
                     queue1.clear()
                 elif(not(maze_[c[1][0]][c[1][1]] == 'S' or maze_[c[1][0]][c[1][1]] == 'G')):
-                    maze_[c[1][0]][c[1][1]] = '@' 
+                    maze_[c[1][0]][c[1][1]] = '@'
         if(queue1):
             queue1.pop(0)
-
+    else:
+        startmaze()
+        start_time = time.time()
     screen.fill("black")
     drawGrid(maze_)
+    end_time = time.time()
+    elapsed_time = end_time - start_time
+    text = font.render(f"{elapsed_time:.2f}" , True, 'white', 'darkred')
+    text_rect = text.get_rect(center=(650, 700))
+    screen.blit(text, text_rect)
     blockSizes = 20
     pygame.display.flip()
     clock.tick(10)
